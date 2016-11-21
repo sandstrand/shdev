@@ -1,0 +1,500 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-15 23:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: rvlvr_options.php:19
+msgid "Navigation and products"
+msgstr ""
+
+#: rvlvr_options.php:25
+msgid "Select the current season"
+msgstr ""
+
+#: rvlvr_options.php:32
+msgid "CategoryID for sesonal equipment, rent"
+msgstr ""
+
+#: rvlvr_options.php:40
+msgid "CategoryID for products, buy"
+msgstr ""
+
+#: rvlvr_options.php:48
+msgid "Attachment ID(s) for page backgrounds"
+msgstr ""
+
+#: rvlvr_options.php:95
+msgid "Set store map. For menu"
+msgstr ""
+
+#: rvlvr_options.php:99 rvlvr_post_types.php:1040
+msgid "Add image"
+msgstr ""
+
+#: rvlvr_options.php:120
+msgid "Settings for Revolver store; seasons, and init settings etc."
+msgstr ""
+
+#: rvlvr_post_types.php:12
+msgctxt "Post Type General Name"
+msgid "Stores"
+msgstr ""
+
+#: rvlvr_post_types.php:13
+msgctxt "Post Type Singular Name"
+msgid "Store"
+msgstr ""
+
+#: rvlvr_post_types.php:14 rvlvr_post_types.php:15 rvlvr_post_types.php:16
+msgid "Stores"
+msgstr ""
+
+#: rvlvr_post_types.php:18
+msgid "All stores"
+msgstr ""
+
+#: rvlvr_post_types.php:19
+msgid "Add new store"
+msgstr ""
+
+#: rvlvr_post_types.php:20 rvlvr_post_types.php:800 rvlvr_post_types.php:943
+msgid "Add new"
+msgstr ""
+
+#: rvlvr_post_types.php:21
+msgid "New store"
+msgstr ""
+
+#: rvlvr_post_types.php:22
+msgid "Edit store"
+msgstr ""
+
+#: rvlvr_post_types.php:23
+msgid "Update store"
+msgstr ""
+
+#: rvlvr_post_types.php:24
+msgid "View store"
+msgstr ""
+
+#: rvlvr_post_types.php:25
+msgid "Search store"
+msgstr ""
+
+#: rvlvr_post_types.php:26 rvlvr_post_types.php:806 rvlvr_post_types.php:949
+msgid "Not found"
+msgstr ""
+
+#: rvlvr_post_types.php:27 rvlvr_post_types.php:807 rvlvr_post_types.php:950
+msgid "Not found in Trash"
+msgstr ""
+
+#: rvlvr_post_types.php:28 rvlvr_post_types.php:808 rvlvr_post_types.php:951
+msgid "Featured Image"
+msgstr ""
+
+#: rvlvr_post_types.php:29 rvlvr_post_types.php:809 rvlvr_post_types.php:952
+msgid "Set featured image"
+msgstr ""
+
+#: rvlvr_post_types.php:30 rvlvr_post_types.php:810 rvlvr_post_types.php:953
+msgid "Remove featured image"
+msgstr ""
+
+#: rvlvr_post_types.php:31 rvlvr_post_types.php:811 rvlvr_post_types.php:954
+msgid "Use as featured image"
+msgstr ""
+
+#: rvlvr_post_types.php:32
+msgid "Insert into store"
+msgstr ""
+
+#: rvlvr_post_types.php:33
+msgid "Uploaded to this store"
+msgstr ""
+
+#: rvlvr_post_types.php:34
+msgid "Stores list"
+msgstr ""
+
+#: rvlvr_post_types.php:35
+msgid "Stores list navigation"
+msgstr ""
+
+#: rvlvr_post_types.php:36
+msgid "Filter stores list"
+msgstr ""
+
+#: rvlvr_post_types.php:39 rvlvr_post_types.php:819
+msgid "Store"
+msgstr ""
+
+#: rvlvr_post_types.php:40 rvlvr_post_types.php:820
+msgid "Post types for all Revolver stores"
+msgstr ""
+
+#: rvlvr_post_types.php:66
+msgid "Butikinställningar"
+msgstr ""
+
+#: rvlvr_post_types.php:74
+msgid "Store address"
+msgstr ""
+
+#: rvlvr_post_types.php:76
+msgid "Store zip code"
+msgstr ""
+
+#: rvlvr_post_types.php:78
+msgid "Store city"
+msgstr ""
+
+#: rvlvr_post_types.php:80
+msgid "Store email"
+msgstr ""
+
+#: rvlvr_post_types.php:82
+msgid "Store phone"
+msgstr ""
+
+#: rvlvr_post_types.php:84
+msgid "Store facebook URL"
+msgstr ""
+
+#: rvlvr_post_types.php:87
+msgid "Store coordinates X"
+msgstr ""
+
+#: rvlvr_post_types.php:89
+msgid "Store coordinates Y"
+msgstr ""
+
+#: rvlvr_post_types.php:91
+msgid "Store type"
+msgstr ""
+
+#: rvlvr_post_types.php:97
+msgid "Store status"
+msgstr ""
+
+#: rvlvr_post_types.php:104
+msgid "Store message"
+msgstr ""
+
+#: rvlvr_post_types.php:108
+msgid "Mondays: "
+msgstr ""
+
+#: rvlvr_post_types.php:114 rvlvr_post_types.php:127 rvlvr_post_types.php:140 
+#: rvlvr_post_types.php:153 rvlvr_post_types.php:166 rvlvr_post_types.php:179 
+#: rvlvr_post_types.php:193
+msgid "Regular hours"
+msgstr ""
+
+#: rvlvr_post_types.php:117 rvlvr_post_types.php:130 rvlvr_post_types.php:143 
+#: rvlvr_post_types.php:156 rvlvr_post_types.php:169 rvlvr_post_types.php:182 
+#: rvlvr_post_types.php:196
+msgid "Special message"
+msgstr ""
+
+#: rvlvr_post_types.php:121
+msgid "Tuesdays: "
+msgstr ""
+
+#: rvlvr_post_types.php:134
+msgid "Wednesdays: "
+msgstr ""
+
+#: rvlvr_post_types.php:147
+msgid "Thursdays: "
+msgstr ""
+
+#: rvlvr_post_types.php:160
+msgid "Fridays: "
+msgstr ""
+
+#: rvlvr_post_types.php:173
+msgid "Saturdays: "
+msgstr ""
+
+#: rvlvr_post_types.php:187
+msgid "Sundays: "
+msgstr ""
+
+#: rvlvr_post_types.php:330
+msgid "Mon-Fri"
+msgstr ""
+
+#: rvlvr_post_types.php:337
+msgid "Mon-Thu"
+msgstr ""
+
+#: rvlvr_post_types.php:338 rvlvr_post_types.php:345
+msgid "Fri"
+msgstr ""
+
+#: rvlvr_post_types.php:341
+msgid "Mon"
+msgstr ""
+
+#: rvlvr_post_types.php:342
+msgid "Tue"
+msgstr ""
+
+#: rvlvr_post_types.php:343
+msgid "Wed"
+msgstr ""
+
+#: rvlvr_post_types.php:344
+msgid "Thu"
+msgstr ""
+
+#: rvlvr_post_types.php:348
+msgid "Sat"
+msgstr ""
+
+#: rvlvr_post_types.php:349
+msgid "Sun"
+msgstr ""
+
+#: rvlvr_post_types.php:353
+msgid "Err: Not found"
+msgstr ""
+
+#: rvlvr_post_types.php:505
+msgid "to our store"
+msgstr ""
+
+#: rvlvr_post_types.php:509
+msgid "Standard hours"
+msgstr ""
+
+#: rvlvr_post_types.php:539 rvlvr_post_types.php:634 rvlvr_post_types.php:714 
+#: rvlvr_social.php:58
+msgid "New title"
+msgstr ""
+
+#: rvlvr_post_types.php:602
+msgid "for pickup"
+msgstr ""
+
+#: rvlvr_post_types.php:608
+msgid "Concept stores"
+msgstr ""
+
+#: rvlvr_post_types.php:616
+msgid "Agent stores"
+msgstr ""
+
+#: rvlvr_post_types.php:715
+msgid "Type string"
+msgstr ""
+
+#: rvlvr_post_types.php:792
+msgctxt "Post Type General Name"
+msgid "Spots"
+msgstr ""
+
+#: rvlvr_post_types.php:793
+msgctxt "Post Type Singular Name"
+msgid "Spot"
+msgstr ""
+
+#: rvlvr_post_types.php:794 rvlvr_post_types.php:795 rvlvr_post_types.php:796
+msgid "Spots"
+msgstr ""
+
+#: rvlvr_post_types.php:798
+msgid "All spots"
+msgstr ""
+
+#: rvlvr_post_types.php:799
+msgid "Add new spot"
+msgstr ""
+
+#: rvlvr_post_types.php:801
+msgid "New spot"
+msgstr ""
+
+#: rvlvr_post_types.php:802
+msgid "Edit spot"
+msgstr ""
+
+#: rvlvr_post_types.php:803
+msgid "Update spot"
+msgstr ""
+
+#: rvlvr_post_types.php:804
+msgid "View spot"
+msgstr ""
+
+#: rvlvr_post_types.php:805
+msgid "Search spot"
+msgstr ""
+
+#: rvlvr_post_types.php:812
+msgid "Insert into spot"
+msgstr ""
+
+#: rvlvr_post_types.php:813
+msgid "Uploaded to this spot"
+msgstr ""
+
+#: rvlvr_post_types.php:814
+msgid "Spots list"
+msgstr ""
+
+#: rvlvr_post_types.php:815
+msgid "Spots list navigation"
+msgstr ""
+
+#: rvlvr_post_types.php:816
+msgid "Filter spots list"
+msgstr ""
+
+#: rvlvr_post_types.php:846
+msgid "Settings for spot"
+msgstr ""
+
+#: rvlvr_post_types.php:853
+msgid "Where does the spot lead? Full URL"
+msgstr ""
+
+#: rvlvr_post_types.php:935
+msgctxt "Post Type General Name"
+msgid "Season"
+msgstr ""
+
+#: rvlvr_post_types.php:936
+msgctxt "Post Type Singular Name"
+msgid "Seasons"
+msgstr ""
+
+#: rvlvr_post_types.php:937 rvlvr_post_types.php:938 rvlvr_post_types.php:939
+msgid "Seasons"
+msgstr ""
+
+#: rvlvr_post_types.php:941
+msgid "All seasons"
+msgstr ""
+
+#: rvlvr_post_types.php:942
+msgid "Add new season"
+msgstr ""
+
+#: rvlvr_post_types.php:944
+msgid "New season"
+msgstr ""
+
+#: rvlvr_post_types.php:945
+msgid "Edit season"
+msgstr ""
+
+#: rvlvr_post_types.php:946
+msgid "Update season"
+msgstr ""
+
+#: rvlvr_post_types.php:947
+msgid "View season"
+msgstr ""
+
+#: rvlvr_post_types.php:948
+msgid "Search season"
+msgstr ""
+
+#: rvlvr_post_types.php:955
+msgid "Insert into season"
+msgstr ""
+
+#: rvlvr_post_types.php:956
+msgid "Uploaded to this season"
+msgstr ""
+
+#: rvlvr_post_types.php:957
+msgid "Seasons list"
+msgstr ""
+
+#: rvlvr_post_types.php:958
+msgid "Seasons list navigation"
+msgstr ""
+
+#: rvlvr_post_types.php:959
+msgid "Filter seasons list"
+msgstr ""
+
+#: rvlvr_post_types.php:962
+msgid "Season"
+msgstr ""
+
+#: rvlvr_post_types.php:963
+msgid "Post types for all Revolver seasons"
+msgstr ""
+
+#: rvlvr_post_types.php:991
+msgid "Settings for season"
+msgstr ""
+
+#: rvlvr_post_types.php:1017
+msgid ""
+"Current background images. Find and remove the \"rvlvr_season_bg\" meta key "
+"with the responding ID to remove image from rooster"
+msgstr ""
+
+#: rvlvr_post_types.php:1021
+msgid "No images added"
+msgstr ""
+
+#: rvlvr_post_types.php:1036
+msgid "Add new image"
+msgstr ""
+
+#: rvlvr_post_types.php:1042
+msgid "Save"
+msgstr ""
+
+#: rvlvr_post_types.php:1044
+msgid "Season expires"
+msgstr ""
+
+#: rvlvr_post_types.php:1046
+msgid "Season attribute shortcode"
+msgstr ""
+
+#: rvlvr_search.php:6
+msgid "Search products"
+msgstr ""
+
+#: rvlvr_search.php:8
+msgid "Search products &hellip;"
+msgstr ""
+
+#. Name of the plugin
+msgid "Revolver Core"
+msgstr ""
+
+#. Description of the plugin
+msgid "Core functions for Revolver."
+msgstr ""
+
+#. URI of the plugin
+msgid "-"
+msgstr ""
+
+#. Author of the plugin
+msgid "Jan Sandstroem"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://legofarmen.se"
+msgstr ""

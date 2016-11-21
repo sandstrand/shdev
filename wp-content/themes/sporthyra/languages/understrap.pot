@@ -1,0 +1,289 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-16 00:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: 404.php:28
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#: author.php:27
+msgid "About:"
+msgstr ""
+
+#: author.php:35 inc/custom-comments.php:16
+msgid "Website"
+msgstr ""
+
+#: author.php:40
+msgid "Profile"
+msgstr ""
+
+#: author.php:45
+msgid "Posts by"
+msgstr ""
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35 comments.php:56
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:37 comments.php:58
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:443 functions.php:472
+msgid "Sales price"
+msgstr ""
+
+#: functions.php:616 functions.php:619
+msgid "404: not found"
+msgstr ""
+
+#: functions.php:869
+msgid "Brands"
+msgstr ""
+
+#: functions.php:892
+msgid "Concept stores"
+msgstr ""
+
+#: functions.php:900
+msgid "Agent stores"
+msgstr ""
+
+#: functions.php:1029
+msgid "Copyright text"
+msgstr ""
+
+#: header.php:31
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:48
+msgid "To checkout &raquo;"
+msgstr ""
+
+#: header.php:157
+msgid "Close"
+msgstr ""
+
+#: header.php:158
+msgid "Choose equipment to rent"
+msgstr ""
+
+#: searchform.php:9 searchform.php:13
+msgid "Search"
+msgstr ""
+
+#: searchform.php:11
+msgid "Search &hellip;"
+msgstr ""
+
+#: inc/custom-comments.php:12
+msgid "Name"
+msgstr ""
+
+#: inc/custom-comments.php:14
+msgid "Email"
+msgstr ""
+
+#: inc/custom-comments.php:25
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: inc/customizer.php:24
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "Number of slides displaying at once"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Slider Time (in ms)"
+msgstr ""
+
+#: inc/customizer.php:57
+msgid "Loop Slider Content"
+msgstr ""
+
+#: inc/setup.php:47
+msgid "Primary Menu xl"
+msgstr ""
+
+#: inc/setup.php:51
+msgid "Primary Menu lg"
+msgstr ""
+
+#: inc/setup.php:55
+msgid "Primary Menu md"
+msgstr ""
+
+#: inc/setup.php:59
+msgid "Primary Menu sm"
+msgstr ""
+
+#: inc/setup.php:63
+msgid "Primary Menu xs"
+msgstr ""
+
+#: inc/setup.php:68
+msgid "Secondary menu ms up"
+msgstr ""
+
+#: inc/setup.php:118
+msgid "Read More..."
+msgstr ""
+
+#: inc/template-tags.php:18
+msgid " Edited %4$s"
+msgstr ""
+
+#: inc/template-tags.php:29
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:34
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:51 inc/template-tags.php:57
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:53
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:59
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:65
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:65
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:65
+msgid "% Comments"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:72
+msgid "Edit %s"
+msgstr ""
+
+#: inc/widgets.php:10
+msgid "Sidebar"
+msgstr ""
+
+#: inc/widgets.php:20
+msgid "Top Slider"
+msgstr ""
+
+#: inc/widgets.php:30
+msgid "Top Static"
+msgstr ""
+
+#: inc/widgets.php:40
+msgid "Footer Full"
+msgstr ""
+
+#: loop-templates/content-none.php:30
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: loop-templates/content-none.php:34
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: loop-templates/content-none.php:41
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: loop-templates/content-page.php:25 loop-templates/content-single.php:29 
+#: loop-templates/content.php:33
+msgid "Pages:"
+msgstr ""
+
+#: loop-templates/content-page.php:34 loop-templates/content-store.php:41
+msgid "Edit"
+msgstr ""
+
+#. Name of the template
+msgid "Empty Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variation.php:23
+msgid "Price"
+msgstr ""
+
+#. Name of the theme
+msgid "UnderStrap"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as parent theme. It is up to you. Including Font Awesome "
+"support, build-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundelt with this install file."
+" Just donwload the .zip, extract it and run \"npm install\", \"bower "
+"install\" and \"gulp copy-assets\" inside the extracted /understrap folder."
+msgstr ""
+
+#. URI of the theme
+msgid "http://understrap.com"
+msgstr ""
+
+#. Author of the theme
+msgid "Holger Koenemann"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.holgerkoenemann.de"
+msgstr ""

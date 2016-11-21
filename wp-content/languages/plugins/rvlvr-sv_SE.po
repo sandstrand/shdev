@@ -1,0 +1,502 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Revolver Core\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-15 23:51+0000\n"
+"PO-Revision-Date: 2016-11-15 23:57+0000\n"
+"Last-Translator: sandstrand <nobody@localhost>\n"
+"Language-Team: Swedish\n"
+"Language: sv-SE\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: rvlvr_post_types.php:12
+msgctxt "Post Type General Name"
+msgid "Stores"
+msgstr ""
+
+#: rvlvr_post_types.php:13
+msgctxt "Post Type Singular Name"
+msgid "Store"
+msgstr ""
+
+#: rvlvr_post_types.php:35
+msgid "Stores list navigation"
+msgstr ""
+
+#: rvlvr_post_types.php:36
+msgid "Filter stores list"
+msgstr ""
+
+#: rvlvr_post_types.php:40 rvlvr_post_types.php:820
+msgid "Post types for all Revolver stores"
+msgstr ""
+
+#: rvlvr_post_types.php:76
+msgid "Store zip code"
+msgstr "Postnummer"
+
+#: rvlvr_post_types.php:78
+msgid "Store city"
+msgstr "Ort"
+
+#: rvlvr_post_types.php:80
+msgid "Store email"
+msgstr "Epost"
+
+#: rvlvr_post_types.php:82
+msgid "Store phone"
+msgstr "Telefon"
+
+#: rvlvr_post_types.php:84
+msgid "Store facebook URL"
+msgstr "Facebook URL"
+
+#: rvlvr_post_types.php:87
+msgid "Store coordinates X"
+msgstr "Gmap koordinater X"
+
+#: rvlvr_post_types.php:89
+msgid "Store coordinates Y"
+msgstr "Gmap koordinater Y"
+
+#: rvlvr_post_types.php:91
+msgid "Store type"
+msgstr "Butikstyp"
+
+#: rvlvr_post_types.php:97
+msgid "Store status"
+msgstr "Butikstatus"
+
+#: rvlvr_post_types.php:104
+msgid "Store message"
+msgstr "Butiksmeddelande"
+
+#: rvlvr_post_types.php:108
+msgid "Mondays: "
+msgstr "Måndagar:"
+
+#: rvlvr_post_types.php:114 rvlvr_post_types.php:127 rvlvr_post_types.php:140 
+#: rvlvr_post_types.php:153 rvlvr_post_types.php:166 rvlvr_post_types.php:179 
+#: rvlvr_post_types.php:193
+msgid "Regular hours"
+msgstr "Ordinarie öppettider"
+
+#: rvlvr_post_types.php:117 rvlvr_post_types.php:130 rvlvr_post_types.php:143 
+#: rvlvr_post_types.php:156 rvlvr_post_types.php:169 rvlvr_post_types.php:182 
+#: rvlvr_post_types.php:196
+msgid "Special message"
+msgstr "Meddelande"
+
+#: rvlvr_post_types.php:121
+msgid "Tuesdays: "
+msgstr "Tisdagar:"
+
+#: rvlvr_post_types.php:134
+msgid "Wednesdays: "
+msgstr "Onsdagar:"
+
+#: rvlvr_post_types.php:147
+msgid "Thursdays: "
+msgstr "Torsdagar:"
+
+#: rvlvr_post_types.php:160
+msgid "Fridays: "
+msgstr "Fredagar:"
+
+#: rvlvr_post_types.php:173
+msgid "Saturdays: "
+msgstr "Lördagar:"
+
+#: rvlvr_post_types.php:187
+msgid "Sundays: "
+msgstr "Söndagar:"
+
+#: rvlvr_post_types.php:330
+msgid "Mon-Fri"
+msgstr "Mån-Fre"
+
+#: rvlvr_post_types.php:337
+msgid "Mon-Thu"
+msgstr "Mån-Tors"
+
+#: rvlvr_post_types.php:338 rvlvr_post_types.php:345
+msgid "Fri"
+msgstr "Fre"
+
+#: rvlvr_post_types.php:341
+msgid "Mon"
+msgstr "Mån"
+
+#: rvlvr_post_types.php:342
+msgid "Tue"
+msgstr "Tis"
+
+#: rvlvr_post_types.php:343
+msgid "Wed"
+msgstr "Ons"
+
+#: rvlvr_post_types.php:344
+msgid "Thu"
+msgstr "Tors"
+
+#: rvlvr_post_types.php:348
+msgid "Sat"
+msgstr "Lör"
+
+#: rvlvr_post_types.php:349
+msgid "Sun"
+msgstr "Sön"
+
+#: rvlvr_post_types.php:353
+msgid "Err: Not found"
+msgstr "Fel: Hittade inget"
+
+#: rvlvr_post_types.php:505
+msgid "to our store"
+msgstr "till vår butik"
+
+#: rvlvr_post_types.php:509
+msgid "Standard hours"
+msgstr "Ordinarie öppettider"
+
+#: rvlvr_post_types.php:539 rvlvr_post_types.php:634 rvlvr_post_types.php:714 
+#: rvlvr_social.php:58
+msgid "New title"
+msgstr "Ny titel"
+
+#: rvlvr_post_types.php:602
+msgid "for pickup"
+msgstr "För upphämtning"
+
+#: rvlvr_post_types.php:608
+msgid "Concept stores"
+msgstr "Konceptbutiker"
+
+#: rvlvr_post_types.php:616
+msgid "Agent stores"
+msgstr "Ombud"
+
+#: rvlvr_post_types.php:715
+msgid "Type string"
+msgstr ""
+
+#: rvlvr_post_types.php:792
+msgctxt "Post Type General Name"
+msgid "Spots"
+msgstr ""
+
+#: rvlvr_post_types.php:793
+msgctxt "Post Type Singular Name"
+msgid "Spot"
+msgstr ""
+
+#: rvlvr_post_types.php:794 rvlvr_post_types.php:795 rvlvr_post_types.php:796
+msgid "Spots"
+msgstr ""
+
+#: rvlvr_post_types.php:798
+msgid "All spots"
+msgstr ""
+
+#: rvlvr_post_types.php:799
+msgid "Add new spot"
+msgstr ""
+
+#: rvlvr_post_types.php:801
+msgid "New spot"
+msgstr ""
+
+#: rvlvr_post_types.php:802
+msgid "Edit spot"
+msgstr ""
+
+#: rvlvr_post_types.php:803
+msgid "Update spot"
+msgstr ""
+
+#: rvlvr_post_types.php:804
+msgid "View spot"
+msgstr ""
+
+#: rvlvr_post_types.php:805
+msgid "Search spot"
+msgstr ""
+
+#: rvlvr_post_types.php:812
+msgid "Insert into spot"
+msgstr ""
+
+#: rvlvr_post_types.php:813
+msgid "Uploaded to this spot"
+msgstr ""
+
+#: rvlvr_post_types.php:814
+msgid "Spots list"
+msgstr ""
+
+#: rvlvr_post_types.php:815
+msgid "Spots list navigation"
+msgstr ""
+
+#: rvlvr_post_types.php:816
+msgid "Filter spots list"
+msgstr ""
+
+#: rvlvr_post_types.php:846
+msgid "Settings for spot"
+msgstr ""
+
+#: rvlvr_post_types.php:853
+msgid "Where does the spot lead? Full URL"
+msgstr ""
+
+#: rvlvr_post_types.php:935
+msgctxt "Post Type General Name"
+msgid "Season"
+msgstr ""
+
+#: rvlvr_post_types.php:936
+msgctxt "Post Type Singular Name"
+msgid "Seasons"
+msgstr ""
+
+#: rvlvr_post_types.php:937 rvlvr_post_types.php:938 rvlvr_post_types.php:939
+msgid "Seasons"
+msgstr "säsonger"
+
+#: rvlvr_post_types.php:941
+msgid "All seasons"
+msgstr "Alla säsonger"
+
+#: rvlvr_post_types.php:942
+msgid "Add new season"
+msgstr "Lägg till n ysäsong"
+
+#: rvlvr_post_types.php:944
+msgid "New season"
+msgstr "Ny säsong"
+
+#: rvlvr_post_types.php:945
+msgid "Edit season"
+msgstr "Rediger säsong"
+
+#: rvlvr_post_types.php:946
+msgid "Update season"
+msgstr "Uppdatera säsong"
+
+#: rvlvr_post_types.php:947
+msgid "View season"
+msgstr "Visa säsong"
+
+#: rvlvr_post_types.php:948
+msgid "Search season"
+msgstr ""
+
+#: rvlvr_post_types.php:955
+msgid "Insert into season"
+msgstr ""
+
+#: rvlvr_post_types.php:956
+msgid "Uploaded to this season"
+msgstr ""
+
+#: rvlvr_post_types.php:957
+msgid "Seasons list"
+msgstr ""
+
+#: rvlvr_post_types.php:958
+msgid "Seasons list navigation"
+msgstr ""
+
+#: rvlvr_post_types.php:959
+msgid "Filter seasons list"
+msgstr ""
+
+#: rvlvr_post_types.php:962
+msgid "Season"
+msgstr "Säsong"
+
+#: rvlvr_post_types.php:963
+msgid "Post types for all Revolver seasons"
+msgstr ""
+
+#: rvlvr_post_types.php:991
+msgid "Settings for season"
+msgstr "Inställningar för säsong"
+
+#: rvlvr_post_types.php:1017
+msgid ""
+"Current background images. Find and remove the \"rvlvr_season_bg\" meta key "
+"with the responding ID to remove image from rooster"
+msgstr ""
+"Nuvarande bakgrundsbilder. Hitta och ta bort meta-nyckel \"rvlvr_season_bg\" "
+"med motsvarande ID för att ta bort kandidat."
+
+#: rvlvr_post_types.php:1021
+msgid "No images added"
+msgstr "Inga bilder har lagts till"
+
+#: rvlvr_post_types.php:1036
+msgid "Add new image"
+msgstr "Lägg till ny bild"
+
+#: rvlvr_post_types.php:1042
+msgid "Save"
+msgstr "Spara"
+
+#: rvlvr_post_types.php:1044
+msgid "Season expires"
+msgstr "Säsongen tar slut"
+
+#: rvlvr_post_types.php:1046
+msgid "Season attribute shortcode"
+msgstr "Attribut för säsongshyra "
+
+#: rvlvr_search.php:6
+msgid "Search products"
+msgstr "Sök produkter"
+
+#: rvlvr_search.php:8
+msgid "Search products &hellip;"
+msgstr "Sök produkter ..."
+
+#. Name of the plugin
+msgid "Revolver Core"
+msgstr ""
+
+#. Description of the plugin
+msgid "Core functions for Revolver."
+msgstr ""
+
+#. URI of the plugin
+msgid "-"
+msgstr ""
+
+#. Author of the plugin
+msgid "Jan Sandstroem"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://legofarmen.se"
+msgstr ""
+
+#: rvlvr_options.php:19
+msgid "Navigation and products"
+msgstr "Navigering och produkter"
+
+#: rvlvr_options.php:25
+msgid "Select the current season"
+msgstr "Välj nuvarande säsong"
+
+#: rvlvr_options.php:32
+msgid "CategoryID for sesonal equipment, rent"
+msgstr "KategoriID för uthyrning"
+
+#: rvlvr_options.php:40
+msgid "CategoryID for products, buy"
+msgstr "KategoriID för försäljning"
+
+#: rvlvr_options.php:48
+msgid "Attachment ID(s) for page backgrounds"
+msgstr "AttachmentID för bakgrundsbild"
+
+#: rvlvr_options.php:95
+msgid "Set store map. For menu"
+msgstr "AttachmentID för bild på karta i meny"
+
+#: rvlvr_options.php:99 rvlvr_post_types.php:1040
+msgid "Add image"
+msgstr "Lägg till bild"
+
+#: rvlvr_options.php:120
+msgid "Settings for Revolver store; seasons, and init settings etc."
+msgstr ""
+"Inställningar för Revolver Store; säsonger, initiala inställningar etc."
+
+#: rvlvr_post_types.php:14 rvlvr_post_types.php:15 rvlvr_post_types.php:16
+msgid "Stores"
+msgstr "Butiker"
+
+#: rvlvr_post_types.php:18
+msgid "All stores"
+msgstr "Alla butiker"
+
+#: rvlvr_post_types.php:19
+msgid "Add new store"
+msgstr "Lägg till ny butik"
+
+#: rvlvr_post_types.php:20 rvlvr_post_types.php:800 rvlvr_post_types.php:943
+msgid "Add new"
+msgstr "Lägg till ny"
+
+#: rvlvr_post_types.php:21
+msgid "New store"
+msgstr "Ny butik"
+
+#: rvlvr_post_types.php:22
+msgid "Edit store"
+msgstr "Redigera butik"
+
+#: rvlvr_post_types.php:23
+msgid "Update store"
+msgstr "Uppdatera butik"
+
+#: rvlvr_post_types.php:24
+msgid "View store"
+msgstr "Visa butik"
+
+#: rvlvr_post_types.php:25
+msgid "Search store"
+msgstr "Sök butik"
+
+#: rvlvr_post_types.php:26 rvlvr_post_types.php:806 rvlvr_post_types.php:949
+msgid "Not found"
+msgstr "Hittade inget"
+
+#: rvlvr_post_types.php:27 rvlvr_post_types.php:807 rvlvr_post_types.php:950
+msgid "Not found in Trash"
+msgstr "Hittade inget i papperskorgen"
+
+#: rvlvr_post_types.php:28 rvlvr_post_types.php:808 rvlvr_post_types.php:951
+msgid "Featured Image"
+msgstr "Fetaured image"
+
+#: rvlvr_post_types.php:29 rvlvr_post_types.php:809 rvlvr_post_types.php:952
+msgid "Set featured image"
+msgstr "Välj featured image"
+
+#: rvlvr_post_types.php:30 rvlvr_post_types.php:810 rvlvr_post_types.php:953
+msgid "Remove featured image"
+msgstr "Ta bort featured image"
+
+#: rvlvr_post_types.php:31 rvlvr_post_types.php:811 rvlvr_post_types.php:954
+msgid "Use as featured image"
+msgstr "Använd som featured image"
+
+#: rvlvr_post_types.php:32
+msgid "Insert into store"
+msgstr "Lägg till i butik"
+
+#: rvlvr_post_types.php:33
+msgid "Uploaded to this store"
+msgstr "Ladda upp till den här butiken"
+
+#: rvlvr_post_types.php:34
+msgid "Stores list"
+msgstr "Lista på butiker"
+
+#: rvlvr_post_types.php:39 rvlvr_post_types.php:819
+msgid "Store"
+msgstr "Butik"
+
+#: rvlvr_post_types.php:66
+msgid "Butikinställningar"
+msgstr "Butiksinställningar"
+
+#: rvlvr_post_types.php:74
+msgid "Store address"
+msgstr "Butik"
