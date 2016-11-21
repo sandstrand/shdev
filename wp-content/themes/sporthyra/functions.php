@@ -1788,15 +1788,8 @@ function custom_woocommerce_email_order_meta_fields( $fields, $sent_to_admin, $o
 add_filter( 'woocommerce_email_order_meta_fields', 'custom_woocommerce_email_order_meta_fields', 10, 3 );
 
 
-//////////
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 // Customise functionality of the default Intercom Wordpress plugin 
 // https://github.com/intercom/intercom-wordpress
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// This code can be added to a plugin or a theme
-// Simplest install would be in your theme's function.php file
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // customise the current Intercom script
 //   - add custom attributes  https://docs.intercom.io/configuring-intercom/send-custom-user-attributes-to-intercom
@@ -1823,3 +1816,21 @@ function customise_intercom(){
 add_action('wp_footer', 'customise_intercom',20); 
 add_action('admin_footer', 'add_intercom_snippet');
 add_action('admin_footer', 'customise_intercom');
+
+/*
+ * Add google analytics to footer
+ */
+
+add_action('wp_footer', 'add_googleanalytics');
+function add_googleanalytics() { ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86276092-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<?php } ?>
