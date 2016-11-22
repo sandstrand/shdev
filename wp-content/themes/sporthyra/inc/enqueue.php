@@ -17,7 +17,7 @@ function understrap_scripts() {
 
 	 // Google maps
     wp_enqueue_script( 'google-maps_local', get_template_directory_uri() . '/js/google-maps.js', array(), '1' , true );
-	wp_enqueue_script( 'google_maps', 'https://maps.google.com/maps/api/js?sensor=false', array(), '0.4.7', true );
+	wp_enqueue_script( 'google_maps', 'https://maps.google.com/maps/api/js?key=AIzaSyBE-3jlM-jsilybxUlnO5Yq1mlrkGKYI0I', array(), '0.4.7', true );
 
 	// Nexa fonts
 	wp_enqueue_script( 'nexa_fonts', get_template_directory_uri() . '/js/nexa_fonts.js', array(), '0.1', false);

@@ -109,8 +109,8 @@ function rvlvr_get_body_bg(){
 	return $body_bg;
 } 
 
-
-add_filter( 'wp_get_attachment_url', function( $url, $id ){
+//add_filter( 'wp_get_attachment_url', function( $url, $id ){
+add_filter( 'wp_get_attachment_url', function( $url ){
   //if( is_ssl() )
     $url = str_replace( 'http://', 'https://', $url );
   return $url;
