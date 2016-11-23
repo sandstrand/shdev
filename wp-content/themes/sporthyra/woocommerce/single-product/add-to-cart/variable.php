@@ -40,7 +40,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							<?php
 								$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( urldecode( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ) : $product->get_variation_default_attribute( $attribute_name );
 								wc_dropdown_variation_attribute_options( array( 'options' => $options, 'attribute' => $attribute_name, 'product' => $product, 'selected' => $selected ) );
-								
+								//rvlvr_print_attribute_description($attribute_name, $options');
+								rvlvr_print_attribute_description($attribute_name, $options);
 							?>
 						</span>
 					</p>

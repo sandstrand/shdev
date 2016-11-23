@@ -1284,15 +1284,17 @@ function rvlvr_print_attribute_description($attribute_name, $options){
 	//echo $attribute_name;
 	//var_export($options);
 	switch ($attribute_name) {
-		case 'pa_pjaxstorlek-senior':
-			echo "<span class='reference'><a href=''>Visa tabell</a></span>";
+		case "pa_ski-length-senior":
+			echo "<span class='reference'><a data-rel='prettyPhotocp' href='" . get_template_directory_uri()  .  "/media/skidlangd_senior_avancerad.png'>Visa tabell</a></span>";
 			break;
-		case "pa_rvlvr_type":
-			
-			
+		case "pa_ski-length-junior":
+                        echo "<span class='reference'><a data-rel='prettyPhotocp' href='" . get_template_directory_uri()  .  "/media/skidlangd_junior_medel.png'>Visa tabell</a></span>";
+			break;
+		case "pa_alpine-boot-size":
+                        echo "<span class='reference'><a data-rel='prettyPhotocp' href='" . get_template_directory_uri()  .  "/media/fotmatare.gif'>Så mäter du</a></span>";
 			break;
 		default:
-			echo "aa"; 
+			break;
 	}
 }	
 
