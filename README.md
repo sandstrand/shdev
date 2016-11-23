@@ -80,10 +80,15 @@ Be cautious of 404 errors in case files are no longer present on wordpress.org
 Download paywalled extension archives to same directory:
 * Woothemes/Local pickup plus  
 * Woothemes/Sequential order number
+* WPRocket
 
 Extract to plugins folder:
 
-`# unzip '*.zip' -d /var/www/$hostname/wp-content/plugins/`
+`# unzip '*.zip' -d /var/www/$HOSTNAME/wp-content/plugins/`
+
+Fix woobrands URI if not fixed by author:
+
+`# mv /var/www/$HOSTNAME/wp-content/plugins/woocommerce-brands /var/www/$HOSTNAME/wp-content/plugins/woo-brands`
 
 ### Uploads
 
@@ -146,6 +151,10 @@ Make sure permalinks are set
 `rm /var/www/html/index.php`
 
 ## Development
+
+### Git setup
+`git config --global user.name "John Doe"`  
+`git config --global user.email johndoe@example.com`  
 
 ### Sass environemt
 
