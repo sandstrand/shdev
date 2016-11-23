@@ -1,7 +1,7 @@
 <?php
 /**
  * Theme  functions and definitions
- *
+ * 
  * @package understrap
  */
 
