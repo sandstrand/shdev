@@ -24,8 +24,12 @@ global $product;
 
 	<div class="woocommerce-variation-price pull-left">
 		<label><?php _e('Pris', 'understrap'); ?></label>		
-		
+		<?php //var_export(is_rent($product)); ?>
+		<?php if( !is_rent($product) ) { ?>
+			<span class="price"><span class="woocommerce-Price-amount amount"><?php echo $product->get_price_html(); ?></span></span>
+		<?php } ?> 
 		{{{ data.variation.price_html }}} 
+
 	</div>
 
 	<div class="woocommerce-variation-availability">

@@ -421,8 +421,9 @@ div#ts-menu-wrapper .navbar-fixed-top{
     left: 0;
     z-index: 1030;
 }	
-.menu_non_season{
+.menu_non_season, .menu_brands{
 	border-left: solid 1px $brand-primary;
+	margin-bottom: 15px;
 }
 	
 
@@ -1626,6 +1627,7 @@ legend {
 	margin-bottom:0px;
 	font-weight:bold;
 }
+
 .woocommerce-cart .entry-content .product dd,
 .woocommerce-cart .entry-content .product p,
 .woocommerce-cart .entry-content .product dl,
@@ -1634,7 +1636,7 @@ legend {
 .woocommerce-order-received .order_details .product-name dl,
 .woocommerce-view-order .order_details .product-name dd,
 .woocommerce-view-order .order_details .product-name p,
-.woocommerce-view-order .order_details .product-name dl,
+.woocommerce-view-order .order_details .product-name dl
 {
 	margin-bottom:0px;
 }

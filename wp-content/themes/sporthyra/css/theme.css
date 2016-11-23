@@ -7483,8 +7483,9 @@ body.not-logged-in .logged_out_hidden {
   left: 0;
   z-index: 1030; }
 
-.menu_non_season {
-  border-left: solid 1px #006eb6; }
+.menu_non_season, .menu_brands {
+  border-left: solid 1px #006eb6;
+  margin-bottom: 15px; }
 
 #t_menus {
   position: relative; }

@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_single_product' );
 			?>
 				
 		</div><!-- .summary -->
-		<?php rvlvr_shipping_info(); ?>
+		<?php rvlvr_shipping_info($product); ?>
 	</div>
 	
 	

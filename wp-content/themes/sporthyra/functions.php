@@ -129,7 +129,7 @@ remove_action( 'woocommerce_before_shop_loop','woocommerce_catalog_ordering', 30
 
 // Single prod
 remove_action( 'woocommerce_before_single_product_summary','woocommerce_show_product_sale_flash', 10, 0);
-remove_action( 'woocommerce_after_single_product_summary','woocommerce_upsell_display', 15, 0);
+remove_action( 'woocommerce_after_single_product_summary','woocommerce_output_related_products', 20, 0);
 remove_action( 'woocommerce_single_product_summary','woocommerce_template_single_meta', 40, 0);
 remove_action( 'woocommerce_single_product_summary','woocommerce_template_single_price', 10, 0);
 
@@ -871,12 +871,12 @@ function rvlvr_menu_products(){
 function rvlvr_menu_products_brands(){
 	$terms = get_terms( array( 'taxonomy' => 'product_brand','hide_empty' => true, ) );
 		if($terms){
-			echo "<div class='rvlvr_menu_block col-lg-2-manual col-md-3 col-sm-4 col-xs-12 menu_div_float_right'>";
+			echo "<div class='rvlvr_menu_block menu_brands col-lg-2-manual col-md-3 col-sm-4 col-xs-12 menu_div_float_right'>";
 				echo "<b>" . __("Varumärken", 'understrap') . "</b>";
 				echo "<ul>";
 					foreach($terms as $term){
 						//var_export($term);
-						echo '<li><a href="/?s=' . $term->name . '&post_type=product">' . $term->name . '</a></li>';
+						echo '<li><a href="/brand/' . $term->name . '">' . $term->name . '</a></li>';
 					}
 				"</ul>";
 			echo "</div>";
@@ -1214,27 +1214,25 @@ add_action('woocommerce_single_product_summary', 'rvlvr_season_upsell', 7 );
 //add_action('woocommerce_single_product_summary', 'rvlvr_shipping_info', 60 );
 
 function rvlvr_shipping_info(){
+	global $product;
 	echo "<div class='shipping_info col-md-7'>"; 
-	echo "<div>
-		<h2>" . __('Fraktinformation', 'understrap') . "</h2></div>";
-		$shipping_cost = get_post_meta( get_the_ID(), 'shipping_cost', true);
-		if(! empty( $shipping_cost) ){
-			if ( $shipping_cost == 'gratis' ){
-				echo '<p>Fraktfri hemleverans.</p>';
-			}
-			else{
-				echo '<p>Vid frakt med DHL är tur- & returfrakt för denna produkt <span class="shipping_per_product amount"> ' . $shipping_cost  . ':-</span></p>';
-			}
-			
-		}
-		rvlvr_season_warning();
+	echo "<div><h2>" . __('Fraktinformation', 'understrap') . "</h2></div>";
+
+	$shipping_cost = get_post_meta( get_the_ID(), 'shipping_cost', true);
+	if(! empty( $shipping_cost) ){	
+		echo '<p>Vid frakt med DHL är tur- & returfrakt för denna produkt <span class="shipping_per_product amount"> ' . $shipping_cost  . ':-</span></p>';
+	}
+	elseif ( $product->get_shipping_class() == 'gratis' ){
+		echo '<p>Vid frakt med DHL är tur- & returfrakt för denna produkt <span class="shipping_per_product amount">gratis</span></p>';
+	}
+	
+	rvlvr_season_warning($product);
 	echo "</div>";
 	echo "<div style='clear:both;'></div>";
 }
 
-function rvlvr_season_warning(){
+function rvlvr_season_warning($product){
 	
-	global $product;
 	if($product->is_type( 'variable' )){
 		foreach(rvlvr_config()['rvlvr_no_rent'] as $check){
 			if( rvlvr_has_attribute_variant($product, $check)){
@@ -1683,7 +1681,7 @@ function rvlvr_get_customer_billing_fields(){
 //// Check if there is any equipment in cart
 function rvlvr_rent_in_cart(){
 	$cat = get_option('rvlvr_settings')['rvlvr_equipment_cat'];
-
+	
 	// check each cart item for our category
 	foreach ( WC()->cart->get_cart() as $cart_item_key => $values ) {
 	$_product = $values['data'];
@@ -1698,9 +1696,36 @@ function rvlvr_rent_in_cart(){
 				//category is in cart!
 				return true;
 			}
+			else{ 
+				return false;
+			}
+			
 		}
 
 	}
+}
+
+function is_rent($product){
+	$cat = get_option('rvlvr_settings')['rvlvr_equipment_cat'];
+
+	// check each cart item for our category
+	
+	$terms = get_the_terms( $product->id, 'product_cat' );
+
+		// second level loop search, in case some items have several categories
+		foreach ($terms as $term) {
+			
+			$_categoryid = $term->term_id;
+			
+			if ( get_ancestors( $_categoryid, 'product_cat' )[0] == $cat ) {
+				//category is in cart!
+				return true;
+			}else{ 
+				return false;
+			}
+		}
+
+	
 }
 
 function kia_woocommerce_order_item_name( $name, $item ){ 
