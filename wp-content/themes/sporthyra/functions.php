@@ -1,6 +1,6 @@
 <?php
 /**
- * understrap functions and definitions
+ * Theme  functions and definitions
  *
  * @package understrap
  */
