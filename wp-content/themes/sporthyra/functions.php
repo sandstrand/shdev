@@ -745,28 +745,32 @@ function rvlvr_get_products($cat){
 	return $products;
 }
 
-function rvlvr_build_menu_products($list, $title, $catid){
+function rvlvr_build_menu_products($list, $title, $catid, $break){
 	
 	
-		echo "<div class='rvlvr_menu_block col-lg-2-manual col-xs-12 col-md-3 col-sm-4'>";
-		//var_export(get_option( "taxonomy_$catid" ));
-			echo "<a href='" . get_category_link($catid) . "'><b>" . $title . "</b></a>";
-			echo "<ul class='rvlvr_menu_products'>";
-			foreach($list as $item){
-				echo "<li>";
-					
-					echo "<a href='" . get_permalink($item->ID). "'>";
-						//var_export($item);
-						echo $item->post_title;
-					echo "</a>";
-				echo "</li>";
-			}
-			echo "</ul>";
+
+	//var_export(get_option( "taxonomy_$catid" ));
+	echo "<a href='" . get_category_link($catid) . "'><b>" . $title . "</b></a>";
+	echo "<ul class='rvlvr_menu_products'>";
+	foreach($list as $item){
+		echo "<li>";			
+			echo "<a href='" . get_permalink($item->ID). "'>";
+				//var_export($item);
+				echo $item->post_title;
+			echo "</a>";
+		echo "</li>";
+		}
+	echo "</ul>";
+	
+	if($break){
 		echo "</div>";
+		echo "<div class='rvlvr_menu_block menu_products col-lg-2-manual col-xs-12 col-md-3 col-sm-4'>";
+	}
+				
 	
 }
-function rvlvr_build_menu_categories($list, $title=false, $catid, $season=false, $class=''){
-	echo "<div class='rvlvr_menu_block col-lg-2-manual col-md-3 col-sm-4 col-xs-12 " . $class . "'>";
+function rvlvr_build_menu_categories($list, $title = false, $catid, $season = false, $class = '', $break = false){
+	echo "<div class='rvlvr_menu_block col-lg-2-manual menu_categories col-md-3 col-sm-4 col-xs-12 " . $class . "'>";
 		if($catid){
 			echo "<a href='" . get_category_link($catid) . "'><b>" . $title . "</b></a>";
 		}
@@ -807,18 +811,41 @@ function rvlvr_build_menu_categories($list, $title=false, $catid, $season=false,
 
 function rvlvr_menu_season_equipment(){
 	
+	$breaks = array( 
+		0 => false, 
+		1 => true, 
+		2 => false,
+		3 => true,
+		4 => false,
+		5 => true,
+		6 => false,
+		7 => true,
+		8 => false
+	);
+	
 	$topcat = get_option('rvlvr_settings')['rvlvr_equipment_cat'];
 	$categories = rvlvr_get_categories($topcat);	
 	
+	$i=0;
+	
+	echo "<div class='rvlvr_menu_block menu_products col-lg-2-manual col-xs-12 col-md-3 col-sm-4'>";
 	foreach($categories as $category){
+		if(array_key_exists($i, $breaks)) { 
+			$break = $breaks[$i]; 
+		}
+		else {
+			$break = false;
+		}
 		$title = $category->name;
 		$cat = $category -> term_id;
 		$products = rvlvr_get_products($cat);
 		$cat_seasons = get_option( "rvlvr_tax_seasons_$cat" );
 		if( $cat_seasons && in_array(rvlvr_get_seasons('current')[0]['ID'], $cat_seasons)){
-			rvlvr_build_menu_products($products, $title, $cat, true);
+				rvlvr_build_menu_products($products, $title, $cat, $break );
+				$i++;
 		}
 	}
+	echo "</div>";
 
 }
 
@@ -857,6 +884,7 @@ function rvlvr_menu_non_season_equipment(){
 }
 
 function rvlvr_menu_products(){
+	$break = array(2,4,6,8,10);
 	
 	$topcat = get_option('rvlvr_settings')['rvlvr_products_cat'];
 	$categories = rvlvr_get_categories($topcat);

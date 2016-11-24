@@ -7651,7 +7651,8 @@ body.not-logged-in .logged_out_hidden {
   line-height: 13px; }
 
 #wrapper-footer-full .widget {
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding: 10px;
   color: #999999;
   padding: 10px 0px 0px 0px; }
@@ -7684,13 +7685,21 @@ div.widget-area, .content-area {
     }
 }
 */
+@media (min-width: 600px) {
+  #wrapper-footer-full .col-sm-6:nth-child(2n+1) {
+    clear: both; } }
+
 @media (min-width: 768px) and (max-width: 1024px) {
+  #wrapper-footer-full .col-sm-6:nth-child(2n+1) {
+    clear: none; }
   #wrapper-footer-full .col-sm-6:nth-child(3n+1) {
     clear: both; } }
 
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 1024px) {
+  #wrapper-footer-full .col-sm-6:nth-child(3n+1) {
+    clear: none; }
   #wrapper-footer-full .col-sm-6:nth-child(2n+1) {
-    clear: both; } }
+    clear: none; } }
 
 #wrapper-footer-full .container {
   background-color: #f7f7f7;

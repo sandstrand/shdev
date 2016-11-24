@@ -667,7 +667,8 @@ div#ts-menu-wrapper .navbar-fixed-top{
 	line-height:13px;
 }
 #wrapper-footer-full .widget{
-	margin-bottom: $grid-gutter-width;
+	margin-top: 15px;
+	margin-bottom: 15px;   
 	padding: $grid-gutter-width / 2; 
 	//font-size: 0.92rem;
 	color: $gray-almost-lightest;
@@ -704,16 +705,29 @@ div.widget-area, .content-area{
     }
 }
 */ 
+@media (min-width: map-get($grid-breakpoints, sm)){
+	#wrapper-footer-full .col-sm-6:nth-child(2n+1){
+        clear: both; 
+    }    
+}
+
 @media (min-width: map-get($grid-breakpoints, md)) and (max-width:map-get($grid-breakpoints, lg)){
+	#wrapper-footer-full .col-sm-6:nth-child(2n+1){
+        clear: none; 
+    }    
 	#wrapper-footer-full .col-sm-6:nth-child(3n+1){
         clear: both;
     }    
 }
-@media (min-width: map-get($grid-breakpoints, sm)) and (max-width:map-get($grid-breakpoints, md)-1){
-	#wrapper-footer-full .col-sm-6:nth-child(2n+1){
-        clear: both;
+@media (min-width: map-get($grid-breakpoints, lg)){
+	#wrapper-footer-full .col-sm-6:nth-child(3n+1){
+        clear: none;
+    }    
+    #wrapper-footer-full .col-sm-6:nth-child(2n+1){
+        clear: none; 
     }    
 }
+
 
 #wrapper-footer-full .container{
 	background-color: $gray-lightest;
