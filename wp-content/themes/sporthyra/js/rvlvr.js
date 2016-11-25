@@ -364,7 +364,7 @@ jQuery(document).ready(function ($) {
 			}		
 			
 			// Sommarsäsong
-			if(variations.indexOf('Hela som') != -1){
+			if(variations.indexOf('Sommarsäsong') != -1){
 				date = ($("#sommar").html());
 				$('#order_return_rent-season-summer').val(date);
 				var info = info + "Artiklar hyrda för sommarsäsongen återlämnas senast " + date + ".<br />";
@@ -372,7 +372,7 @@ jQuery(document).ready(function ($) {
 			}
 			
 			// Vintersäsong
-			if(variations.indexOf('Hela vintern') != -1){
+			if(variations.indexOf('Vintersäsong') != -1){
 				date = ($("#vinter").html());
 				$('#order_return_rent-season-winter').val(date);
 				console.log (date);

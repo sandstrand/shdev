@@ -1506,7 +1506,10 @@ function rvlvr_order_meta( $order_id ) {
 		update_post_meta( $order_id, 'order_return_' . $key, $_POST['order_return_' . $key]  );
 
 	}
-
+	if ( ! empty( $_POST['order_delivery_note'] ) ) {
+        update_post_meta( $order_id, 'order_delivery_note', $_POST['order_delivery_note']  );
+    }
+	
 	if ( ! empty( $_POST['pickup_location'][0] ) ) {
         update_post_meta( $order_id, 'pickup_location_1', $_POST['pickup_location'][0]  );
     }
