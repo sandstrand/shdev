@@ -117,7 +117,7 @@ function rvlvr_get_body_bg(){
   return $url;
 });*/
 
-add_filter('wp_get_attachment_url', 'honor_ssl_for_attachments');
+//add_filter('wp_get_attachment_url', 'honor_ssl_for_attachments');
 function honor_ssl_for_attachments($url) {
 	$http = site_url(FALSE, 'http');
 	$https = site_url(FALSE, 'https');
