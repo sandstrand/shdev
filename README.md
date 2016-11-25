@@ -21,7 +21,7 @@ Commands assumes safe working directory. Commands are written as root but would 
 
 ### Install tools
 
-`# apt-get install -y curl git unzip snmp`  
+`# apt-get install -y curl git unzip snmp sudo`  
 `# curl -sL https://deb.nodesource.com/setup_4.x | bash -`  
 `# apt-get install --yes nodejs build-essential`  
 `# npm install bower -g`  
