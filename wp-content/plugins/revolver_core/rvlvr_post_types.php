@@ -462,6 +462,14 @@ function rvlvr_get_store_open_status($post){
 				if(isset($first)){ echo "<span class='hours_first'>" . $first . "</span>"; }
 				if(isset($second)){ echo "<span class='hours_second'>" . $second . "</span>"; }
 				echo "<span class='hours_welcome'>"	. __('Välkommen in!', 'rvlvr') . "</span>";
+				echo "<div class='hidden-lg-up'>";
+					if(isset($customs['rvlvr_store_address'])){ echo $customs['rvlvr_store_address'][0] . "<br />"; }
+					if(isset($customs['rvlvr_store_zipcode'])){ echo $customs['rvlvr_store_zipcode'][0] . " "; }
+					if(isset($customs['rvlvr_store_city'])){ echo $customs['rvlvr_store_city'][0] . "<br />"; } 
+			
+					if(isset($customs['rvlvr_store_phone'])){ echo $customs['rvlvr_store_phone'][0] . "<br />"; }
+					if(isset($customs['rvlvr_store_public_email'])){ echo "<a class='secondary' href='mailto:" . $customs['rvlvr_store_public_email'][0] . "'>" . $customs['rvlvr_store_public_email'][0] . "</a>"; }
+				echo "</div>";
 			echo "</div>";
 			echo "<div class='col-sm-4 hidden-lg-up'>";
 				echo "<span class='hours_second'>" . __('Ordinarie öppettider', 'rlvlr') . "</span>";
@@ -554,12 +562,12 @@ class rvlvr_store_widget extends WP_Widget {
 			echo "<div>";
 			echo "<b>" . get_the_title() . "</b><br />";
 			if(isset($customs['rvlvr_store_address'])){ echo $customs['rvlvr_store_address'][0] . "<br />"; }
-			if(isset($customs['rvlvr_store_zipcode'])){ echo $customs['rvlvr_store_zipcode'][0]; }
+			if(isset($customs['rvlvr_store_zipcode'])){ echo $customs['rvlvr_store_zipcode'][0] . " "; }
 			if(isset($customs['rvlvr_store_city'])){ echo $customs['rvlvr_store_city'][0]; }
 			echo "</div>";
 			echo "<div>";
 			if(isset($customs['rvlvr_store_phone'])){ echo $customs['rvlvr_store_phone'][0] . "<br />"; }
-			if(isset($customs['rvlvr_store_email'])){ echo "<a class='secondary' href='mailto:" . $customs['rvlvr_store_email'][0] . "'>" . $customs['rvlvr_store_email'][0] . "</a>"; }
+			if(isset($customs['rvlvr_store_public_email'])){ echo "<a class='secondary' href='mailto:" . $customs['rvlvr_store_public_email'][0] . "'>" . $customs['rvlvr_store_public_email'][0] . "</a>"; }
 			echo "</div>";
 			echo $args['after_widget'];
 		}

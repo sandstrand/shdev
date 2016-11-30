@@ -8115,6 +8115,9 @@ single-product .entry-content iframe {
 .single-store .entry-content .store_meta, .single-store .entry-content .store_fb_cta {
   background-color: #006eb6; }
 
+.single-store .entry-content .store_meta a {
+  color: #fff; }
+
 .single-store .entry-content .store_meta {
   padding-bottom: 15px;
   padding-left: 10px;

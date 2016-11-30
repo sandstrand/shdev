@@ -1620,8 +1620,8 @@ function custom_override_checkout_fields( $fields ) {
 	$fields['billing']['billing_personnr'] = array( 'label' => __('Personnummer', 'woocommerce'), 'placeholder'   => __('yyyymmddnnnn', 'placeholder', 'woocommerce'), 'required'  => true,	'clear'=> true ,'class' => array('col-xs-12 col-sm-6'));
 	
 	$fields['account']['account_username']['class'] = array('col-xs-12 col-sm-6');		
-	$fields['account']['account_password']['class'] = array('col-xs-12 col-sm-6');	 
-	//$fields['account']['account_password-2']['class'] = array('col-xs-12 col-sm-6');	 	
+	$fields['account']['account_password']['class'] = array('pull-right col-xs-12 col-sm-6');	 
+	$fields['account']['account_username']['label'] = __('Användarnamn', 'understrap');	 	
 	//$fields['account']['account_password-2']['label'] = __('Upprepa lösenord', 'understrap');	 	
 	// Hook in
   
