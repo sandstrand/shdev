@@ -319,45 +319,54 @@ function rvlvr_get_store_hours_condensed($post){
 		$customs=get_post_custom(get_the_id());
 		$hours = array();
 		foreach($days as $day){
-			$hours[] = array($day, $customs['rvlvr_store_status_' . $day][0], $customs['rvlvr_store_open_' . $day][0] . $customs['rvlvr_store_close_' . $day][0] . $customs['rvlvr_store_message_' . $day][0]);
-			
+			if($customs['rvlvr_store_status_' . $day][0] == 0){
+				$hours[$day] = $customs['rvlvr_store_open_' . $day][0] . " - " . $customs['rvlvr_store_close_' . $day][0];
+			}
+			elseif($customs['rvlvr_store_status_' . $day][0] == 1){
+				$hours[$day] = __('Stängt', 'rvlvr');
+			}
+			else{
+				$hours[$day] = __('Saknas', 'rvlvr');
+			}
+		//var_export($hours);
 		
 		}
 		$hours2=array();
 		
 		
-		if (isset(
-			$customs['rvlvr_store_open_monday']) && 
-			$customs['rvlvr_store_open_monday'][0] . $customs['rvlvr_store_close_monday'][0]  == $customs['rvlvr_store_open_tuesday'][0] . $customs['rvlvr_store_close_tuesday'][0] && 
-			$customs['rvlvr_store_open_monday'][0] . $customs['rvlvr_store_close_monday'][0]  == $customs['rvlvr_store_open_wednesday'][0] .$customs['rvlvr_store_close_wednesday'][0]  && 
-			$customs['rvlvr_store_open_monday'][0] . $customs['rvlvr_store_close_monday'][0]  == $customs['rvlvr_store_open_thursday'][0] . $customs['rvlvr_store_close_thursday'][0] && 
-			$customs['rvlvr_store_open_monday'][0] . $customs['rvlvr_store_close_monday'][0]  == $customs['rvlvr_store_open_friday'][0] . $customs['rvlvr_store_close_friday'][0] ) { 
+		if (isset($hours['monday']) && 
+			$hours['monday'] == $hours['tuesday'] && 
+			$hours['monday'] == $hours['wednesday'] && 			
+			$hours['monday'] == $hours['thursday'] && 
+			$hours['monday'] == $hours['friday']){
 			
-			$hours2[__('Mon-Fri', 'rvlvr')] = $customs['rvlvr_store_open_monday'][0] . " - " . $customs['rvlvr_store_close_monday'][0] ;
+			$hours2[__('Mon-Fri', 'rvlvr')] = $hours['monday'];
 		} 
-		elseif (isset($customs['rvlvr_store_open_monday']) && 
-			$customs['rvlvr_store_open_monday'][0] . $customs['rvlvr_store_close_monday'][0] == $customs['rvlvr_store_open_tuesday'][0] . $customs['rvlvr_store_close_tuesday'][0]  && 
-			$customs['rvlvr_store_open_monday'][0] . $customs['rvlvr_store_close_monday'][0] == $customs['rvlvr_store_open_wednesday'][0] . $customs['rvlvr_store_close_wednesday'][0]  && 
-			$customs['rvlvr_store_open_monday'][0] . $customs['rvlvr_store_close_monday'][0] == $customs['rvlvr_store_open_thursday'][0] . $customs['rvlvr_store_close_thursday'][0]) { 
+		elseif (isset($hours['monday']) && 
+			$hours['monday'] == $hours['tuesday'] && 
+			$hours['monday'] == $hours['wednesday'] && 			
+			$hours['monday'] == $hours['thursday']){
 
-			$hours2[__('Mon-Thu', 'rvlvr')] = $customs['rvlvr_store_open_monday'][0] . " - " . $customs['rvlvr_store_close_monday'][0] ;
-			$hours2[__('Fri', 'rvlvr')] = $customs['rvlvr_store_open_friday'][0] . " - " . $customs['rvlvr_store_close_friday'][0] ;
+			$hours2[__('Mon-Thu', 'rvlvr')] = $hours['monday'];
+			$hours2[__('Fri', 'rvlvr')] = $hours['friday'];
 		}
-		elseif (isset($customs['rvlvr_store_open_monday'])){ 
-			$hours2[__('Mon', 'rvlvr')] = $customs['rvlvr_store_open_monday'][0] . " - " . $customs['rvlvr_store_close_monday'][0];
-			$hours2[__('Tue', 'rvlvr')] = $customs['rvlvr_store_open_tuesday'][0] . " - " . $customs['rvlvr_store_close_tuesday'][0];
-			$hours2[__('Wed', 'rvlvr')] = $customs['rvlvr_store_open_wednesday'][0] . " - " . $customs['rvlvr_store_close_wednesday'][0];
-			$hours2[__('Thu', 'rvlvr')] = $customs['rvlvr_store_open_thursday'][0] . " - " . $customs['rvlvr_store_close_thursday'][0];
-			$hours2[__('Fri', 'rvlvr')] = $customs['rvlvr_store_open_friday'][0] . " - " . $customs['rvlvr_store_close_friday'][0];
+		elseif (isset($hours['monday'])){ 
+		
+			$hours2[__('Mon', 'rvlvr')] = $hours['monday'];
+			$hours2[__('Tue', 'rvlvr')] = $hours['tuesday'];
+			$hours2[__('Wed', 'rvlvr')] = $hours['wednesday'];
+			$hours2[__('Thu', 'rvlvr')] = $hours['thursday'];
+			$hours2[__('Fri', 'rvlvr')] = $hours['friday'];
 		}
-		if(isset($customs['rvlvr_store_open_monday'])){
-			$hours2[__('Sat', 'rvlvr')] = $customs['rvlvr_store_open_saturday'][0] . " - " . $customs['rvlvr_store_close_saturday'][0];
-			$hours2[__('Sun', 'rvlvr')] = $customs['rvlvr_store_open_sunday'][0] . " - " . $customs['rvlvr_store_close_sunday'][0];
-		}
+		
+		$hours2[__('Sat', 'rvlvr')] = $hours['saturday'];
+		$hours2[__('Sun', 'rvlvr')] = $hours['sunday'];
+
 	
 	} else {
 		$hours2 = __('Err: Not found', 'rvlvr');
 	}
+	
 	return $hours2;
 }
 function rvlvr_get_store_open_status($post){
@@ -409,7 +418,7 @@ function rvlvr_get_store_open_status($post){
 			$first = __("Vi har öppet idag till ", 'rvlvr') . $hours[$day_of_week]['closes'];
 			// Tomorrow is open
 			if($hours[$day_of_tomorrow]['status'] == 0){
-				$second = __("Imorgon: ",'rvlvr') . $hours[$day_of_tomorrow]['opens'] . " - " . $hours[$day_of_week]['closes'];
+				$second = __("Imorgon: ",'rvlvr') . $hours[$day_of_tomorrow]['opens'] . " - " . $hours[$day_of_tomorrow]['closes'];
 			}
 			elseif($hours[$day_of_tomorrow]['status'] == 2){
 				$second = __("Imorgon: ", 'rvlvr') . $hours[$day_of_tomorrow]['message'];
