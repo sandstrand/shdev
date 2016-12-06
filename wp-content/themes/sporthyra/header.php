@@ -43,9 +43,9 @@
 					<div class="menu_cart hidden-xs-down">
 						
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-						<?= sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) ?> <br />
+						<?= sprintf ( _n( '%d vara', '%d varor', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) ?> <br />
 						<?= WC()->cart->get_cart_total() ?>
-						<span class="hidden-lg-down"><br /><?=__('To checkout &raquo;', 'understrap') ?></span>
+						<span class="hidden-lg-down"><br /><?=__('Till kassan &raquo;', 'understrap') ?></span>
 
 					</div>
 					</a>
