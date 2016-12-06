@@ -425,7 +425,7 @@ function rvlvr_get_store_open_status($post){
 			}
 		}	
 		// Is not yet open
-		elseif($time_of_day < date( "H:i", strtotime($hours[$day_of_week]['opens']))) {
+		elseif( $hours[$day_of_week]['status'] == 0 && $time_of_day < date( "H:i", strtotime($hours[$day_of_week]['opens']))) {
 			$first = __('Öppet idag: ', 'rvlvr') . $hours[$day_of_week]['opens'] . " - " . $hours[$day_of_week]['closes'];		
 			// Tomorrow is open
 			if($hours[$day_of_tomorrow]['status'] == 0){
@@ -436,13 +436,26 @@ function rvlvr_get_store_open_status($post){
 			}
 		}
 		// Is closed
-		elseif($time_of_day > date( "H:i", strtotime($hours[$day_of_week]['closes']))){
+		
+		elseif($hours[$day_of_week]['status'] == 2){
+			$first = __("Idag: ", 'rvlvr') .  $hours[$day_of_tomorrow]['message'];			
+			if($hours[$day_of_tomorrow]['status'] == 0){
+				$second = __("Öppet imorgon: ", 'rvlvr') .  $hours[$day_of_tomorrow]['opens'] . " - " . $hours[$day_of_tomorrow]['closes'];
+			}	
+			elseif($hours[$day_of_tomorrow]['status'] == 2){
+				$second = __("Imorgon: ", 'rvlvr') . $hours[$day_of_tomorrow]['message'];
+			}
+			else{
+			
+			}
+		}
+		elseif( $hours[$day_of_week]['status'] != 0 || $time_of_day > date( "H:i", strtotime($hours[$day_of_week]['closes']))){
 			// Tomorrow is open
 			if($hours[$day_of_tomorrow]['status'] == 0){
 				$first = __("Öppet imorgon: ", 'rvlvr') .  $hours[$day_of_tomorrow]['opens'] . " - " . $hours[$day_of_tomorrow]['closes'];
 			}	
 			elseif($hours[$day_of_tomorrow]['status'] == 2){
-				$first = __("Öppet imorgon: ", 'rvlvr') . $hours[$day_of_tomorrow]['message'];
+				$first = __("Imorgon: ", 'rvlvr') . $hours[$day_of_tomorrow]['message'];
 			}
 			else{
 			
