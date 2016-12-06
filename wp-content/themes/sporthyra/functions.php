@@ -701,7 +701,7 @@ function rvlvr_get_seasons($which) {
 	}
 	elseif($which == 'all'){
 		foreach($seasons as $season){
-			$season_subset[] = array('ID' => $season->ID, 'title' => $season->post_title, 'expire' => get_post_meta($season->ID, 'rvlvr_season_expires')[0]);
+			$season_subset[] = array('ID' => $season->ID, 'title' => $season->post_title, 'expire' => get_post_meta($season->ID, 'rvlvr_season_expires')[0], 'attribute' => get_post_meta($season->ID, 'rvlvr_season_attribute')[0]);
 		}
 	}
 	return $season_subset;
@@ -1789,8 +1789,42 @@ add_filter( 'woocommerce_order_item_name', 'kia_woocommerce_order_item_name', 10
 function rvlvr_config(){
 	return array(
 		'rvlvr_attribute' => 'rvlvr-condition',
-		'rvlvr_no_rent' => array('rent-1_day', 'rent-2_days', 'rent-3_days', 'rent-4_days', 'rent-week', 'rent-1_month', 'rent-3_months')
-	
+		'rvlvr_no_rent' => array('rent-1_day', 'rent-2_days', 'rent-3_days', 'rent-4_days', 'rent-week', 'rent-1_month', 'rent-3_months'),
+		'rvlvr_all_attributes' => array(
+			array(
+				'attribute' => 'rent-1_day', 
+				'title' => '1 dag'),
+			array(
+				'attribute' => 'rent-2_days',
+				'title' => '2 dagar'),
+			array( 
+				'attribute' => 'rent-3_days',
+				'title' => '3 dagar'),
+			array(
+				'attribute' => 'rent-4_days',
+				'title' => '4 dagar'), 
+			array(
+				'attribute' => 'rent-week',
+				'title' => '5-8 dagar'),
+			array(
+				'attribute' => 'rent-1_month',
+				'title' => '1 månad'),
+			array(
+				'attribute' => 'rent-3_months',
+				'title' => '3 månader'),
+			array(
+				'attribute' => 'rent-season-summer',
+				'title' => 'Säsong'), 
+			array(
+				'attribute' => 'rent-season-winter',
+				'title' => 'Säsong')/*, 
+			array(
+				'attribute' => 'buy-new',
+				'title' => 'Nytt'),
+			array(
+				'attribute' => 'buy-used',
+				'title' => 'Begagnat')*/
+		)
 	);
 
 }

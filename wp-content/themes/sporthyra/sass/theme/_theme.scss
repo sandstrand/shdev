@@ -1928,6 +1928,81 @@ legend {
 	}
 }
 
+
+//// Price list
+
+.all_prices h2{
+	margin-top:15px;
+}
+.all_prices h3{
+	margin-top:25px;
+}
+
+.all_prices .attribute_header{ 
+	vertical-align: bottom;
+	height: 45px;
+	display: flex;
+	//justify-content: flex-end;
+	align-items: flex-end;  
+	
+}
+
+.all_prices .attribute_price{
+
+}
+.all_prices ul{
+	list-style-type: none;
+	padding-left: 0px;
+}
+.all_prices ul li .categories{
+	border-top: solid 1px $gray3;
+	margin-top:30px; 
+
+}
+.all_prices ul li ul li .row div{
+	padding-top:7px;
+	padding-bottom: 7px;
+}
+.all_prices ul li ul li .row div:nth-of-type(2),
+.all_prices ul li .row div.rent,
+.all_prices ul li .row div.attribute_header:nth-of-type(2)
+{
+	//border-left:1px solid $gray3;
+}
+.all_prices ul li ul li .row div:nth-of-type(11),
+.all_prices ul li ul li .row div:nth-of-type(9),
+.all_prices ul li .row div.rent,
+.all_prices ul li .row div.attribute_header:nth-of-type(9),
+.all_prices ul li .row div.attribute_header:nth-of-type(11)
+{
+	//border-right:1px solid $gray3;
+}
+.all_prices ul li .row div.rent,
+.all_prices ul li .row div.buy{
+	//border-top: solid 1px $gray3;
+}
+.all_prices ul li ul li:last-of-type .row {
+	//border-bottom: solid 1px $gray3; 
+}
+
+.all_prices ul li ul li:nth-of-type(2n-1) .row{
+	background-color: $gray-lightest;
+}
+
+@media (max-width:map-get($grid-breakpoints, sm)){
+   .all_prices .product{
+		font-weight:bold;	
+	}
+	.all_prices ul li ul li .row div{
+		padding-top:3px;
+		padding-bottom: 3px;
+	}
+	.all_prices ul li ul li .row{
+		padding-top:8px;
+		padding-bottom: 8px;
+	}
+}
+
 // Debug
 
 .navbar-toggle{

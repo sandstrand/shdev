@@ -8653,6 +8653,43 @@ input[type=radio] {
     padding-right: 0px;
     padding-left: 0px; } }
 
+.all_prices h2 {
+  margin-top: 15px; }
+
+.all_prices h3 {
+  margin-top: 25px; }
+
+.all_prices .attribute_header {
+  vertical-align: bottom;
+  height: 45px;
+  display: flex;
+  align-items: flex-end; }
+
+.all_prices ul {
+  list-style-type: none;
+  padding-left: 0px; }
+
+.all_prices ul li .categories {
+  border-top: solid 1px #e6e6e6;
+  margin-top: 30px; }
+
+.all_prices ul li ul li .row div {
+  padding-top: 7px;
+  padding-bottom: 7px; }
+
+.all_prices ul li ul li:nth-of-type(2n-1) .row {
+  background-color: #f7f7f7; }
+
+@media (max-width: 600px) {
+  .all_prices .product {
+    font-weight: bold; }
+  .all_prices ul li ul li .row div {
+    padding-top: 3px;
+    padding-bottom: 3px; }
+  .all_prices ul li ul li .row {
+    padding-top: 8px;
+    padding-bottom: 8px; } }
+
 .navbar-toggle {
   background-color: #000; }
 
