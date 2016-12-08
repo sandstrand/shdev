@@ -1228,7 +1228,7 @@ function rvlvr_season_upsell(){
 			foreach ($seasons as $season){
 				$season_attribute = get_post_meta($season->ID, 'rvlvr_season_attribute', true);
 				
-				if(array_key_exists($season_attribute, $prices)){
+				if(array_key_exists($season_attribute, $prices) && !in_array(get_the_id(), rvlvr_config()['rvlvr_no_season_upsell'])){
 					echo "<div class='season_upsell'><p>";
 					__(printf('Behåll utrustning till %s, bara %s med säsongshyra', get_post_meta($season->ID, 'rvlvr_season_expires', true), strip_tags($prices[$season_attribute])), 'understrap');
 					echo "</p></div>";
@@ -1251,20 +1251,22 @@ add_action('woocommerce_single_product_summary', 'rvlvr_season_upsell', 7 );
 
 function rvlvr_shipping_info(){
 	global $product;
-	echo "<div class='shipping_info col-md-7'>"; 
-	echo "<div><h2>" . __('Fraktinformation', 'understrap') . "</h2></div>";
+	if(!in_array(get_the_id(), rvlvr_config()['rvlvr_no_season_upsell'])){
+		echo "<div class='shipping_info col-md-7'>"; 
+		echo "<div><h2>" . __('Fraktinformation', 'understrap') . "</h2></div>";
 
-	$shipping_cost = get_post_meta( get_the_ID(), 'shipping_cost', true);
-	if(! empty( $shipping_cost) ){	
-		echo '<p>Vid frakt med DHL är tur- & returfrakt för denna produkt <span class="shipping_per_product amount"> ' . $shipping_cost  . ':-</span></p>';
+		$shipping_cost = get_post_meta( get_the_ID(), 'shipping_cost', true);
+		if(! empty( $shipping_cost) ){	
+			echo '<p>Vid frakt med DHL är tur- & returfrakt för denna produkt <span class="shipping_per_product amount"> ' . $shipping_cost  . ':-</span></p>';
+		}
+		elseif ( $product->get_shipping_class() == 'gratis' ){
+			echo '<p>Vid frakt med DHL är tur- & returfrakt för denna produkt <span class="shipping_per_product amount">gratis</span></p>';
+		}
+		
+		rvlvr_season_warning($product);
+		echo "</div>";
+		echo "<div style='clear:both;'></div>";
 	}
-	elseif ( $product->get_shipping_class() == 'gratis' ){
-		echo '<p>Vid frakt med DHL är tur- & returfrakt för denna produkt <span class="shipping_per_product amount">gratis</span></p>';
-	}
-	
-	rvlvr_season_warning($product);
-	echo "</div>";
-	echo "<div style='clear:both;'></div>";
 }
 
 function rvlvr_season_warning($product){
@@ -1375,7 +1377,7 @@ function woo_custom_cart_button_text() {
 add_action( 'woocommerce_before_order_notes', 'rvlvr_checkout_delivery_date' );
 
 function rvlvr_earliest_delivery($fetch = false){
-	if( WC()->session->get( 'chosen_shipping_methods' )[0] == 'flat_rate:4'  || $fetch == 'shipping' ){
+	if( preg_match('/' . rvlvr_config()['rvlvr_shipping_method_name'] . '/',WC()->session->get( 'chosen_shipping_methods' )[0]) || $fetch == 'shipping' ){
 		$date = date('Y-m-d', strtotime(get_option( 'rvlvr_settings' )['rvlvr_delivery_shipping'] . "days"));
 		return array( 'date' => $date, 'message' => 'Tidigaste datum för hemleverans är ' . $date);
 	}
@@ -1788,6 +1790,13 @@ add_filter( 'woocommerce_order_item_name', 'kia_woocommerce_order_item_name', 10
 
 function rvlvr_config(){
 	return array(
+		'rvlvr_shipping_method_name' => 'flat_rate',
+		'rvlvr_no_season_upsell' => array( 
+			'3755'
+		),
+		'rvlvr_no_shipping_info' => array(
+			'3755'
+		),
 		'rvlvr_attribute' => 'rvlvr-condition',
 		'rvlvr_no_rent' => array('rent-1_day', 'rent-2_days', 'rent-3_days', 'rent-4_days', 'rent-week', 'rent-1_month', 'rent-3_months'),
 		'rvlvr_all_attributes' => array(
