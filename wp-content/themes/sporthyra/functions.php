@@ -1888,13 +1888,19 @@ add_filter( 'woocommerce_email_customer_details_fields', 'custom_gift_card__orde
 
 
 function custom_woocommerce_email_order_meta_fields( $fields, $sent_to_admin, $order ) {
+    $fields['order_delivery_date'] = array(
+        'label' => 'Leveransdatum',
+        'value' => get_post_meta( $order->id, 'order_delivery_date', true ),
+    );
     $fields['order_delivery_notes'] = array(
-        'label' => '',
+        'label' => 'Retur av utrustning',
         'value' => get_post_meta( $order->id, 'order_delivery_note', true ),
     );
+	
+
     return $fields;
 }
-add_filter( 'woocommerce_email_order_meta_fields', 'custom_woocommerce_email_order_meta_fields', 10, 3 );
+add_filter( 'woocommerce_email_order_meta_fields', 'custom_woocommerce_email_order_meta_fields', 100, 3 );
 
 
 // Customise functionality of the default Intercom Wordpress plugin 
