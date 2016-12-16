@@ -1903,6 +1903,10 @@ function custom_woocommerce_email_order_meta_fields( $fields, $sent_to_admin, $o
 add_filter( 'woocommerce_email_order_meta_fields', 'custom_woocommerce_email_order_meta_fields', 100, 3 );
 
 
+//xmlrpc security fix
+add_filter('xmlrpc_enabled', '__return_false');
+
+
 // Customise functionality of the default Intercom Wordpress plugin 
 // https://github.com/intercom/intercom-wordpress
 
