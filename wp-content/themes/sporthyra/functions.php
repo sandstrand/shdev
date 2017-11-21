@@ -939,12 +939,14 @@ function rvlvr_menu_md_stores(){
 		echo "</ul>";
 	echo "</div>";
 	echo "<div class='col-md-3 col-sm-6'>";
-		echo "<b>" . __('Ombud', 'understrap' ) . "</b>";
-		echo "<ul>";
-			foreach(rvlvr_get_stores('agent') as $store){
-				echo "<li><a class='secondary' href='" . get_permalink($store->ID) . "' >" . $store->post_title . "</a></li>";
-			}
-		echo "</ul>";
+		if(count(rvlvr_get_stores('agent'))>0){
+			echo "<b>" . __('Ombud', 'understrap' ) . "</b>";
+			echo "<ul>";
+				foreach(rvlvr_get_stores('agent') as $store){
+					echo "<li><a class='secondary' href='" . get_permalink($store->ID) . "' >" . $store->post_title . "</a></li>";
+				}
+			echo "</ul>";
+		}
 	echo "</div>";
 
 	
