@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="row">
 	<div class="col-xs-12 col-sm-4 pull-right">
 		<a href="<?php echo esc_url( wc_get_checkout_url() ) ;?>" class="checkout-button button alt wc-forward">
-		<button><?php echo __( 'Proceed to Checkout', 'woocommerce' ); ?></button>
+		<button><?php echo __( 'Till kassan', 'woocommerce' ); ?></button>
 		</a>
 	</div>
 </div>

@@ -381,7 +381,7 @@ function rvlvr_loop_product_prices() {
 
 		// Variable type
 		
-		if($product->product_type == 'variable'){
+		if($product->get_type() == 'variable'){
 			//var_export($product->get_available_variations());
 			if( $product->get_attribute('pa_rvlvr-condition') ){ 																		
 				
@@ -450,14 +450,14 @@ function rvlvr_loop_product_prices() {
 				$variation_id = $variations[0]['variation_id'];
 				$variation_product = new WC_Product_Variation( $variation_id );
 				if($product->is_on_sale()==true){
-					$price1_primary = $variation_product->regular_price . get_woocommerce_currency_symbol();
+					$price1_primary = $variation_product->get_regular_price() . get_woocommerce_currency_symbol();
 					$price1_class = "price_old";
-					$price2_primary = $variation_product->sale_price . get_woocommerce_currency_symbol();
+					$price2_primary = $variation_product->get_sale_price() . get_woocommerce_currency_symbol();
 					$price2_secondary = "/ " . __('Reapris', 'understrap');
 					$price2_class = "price_sale";
 				}
 				else{
-					$price1_primary = $variation_product->regular_price . get_woocommerce_currency_symbol();
+					$price1_primary = $variation_product->get_regular_price() . get_woocommerce_currency_symbol();
 					
 					foreach( $terms as $object){
 						if($object->slug==key($prices)) {
@@ -474,21 +474,21 @@ function rvlvr_loop_product_prices() {
 		}
 		
 		// Simple type
-		elseif($product->product_type == 'simple'){
+		elseif($product->get_type() == 'simple'){
 			
 			// REA
 			if($product->is_on_sale()==true){
-				$price1_primary = $product->regular_price . get_woocommerce_currency_symbol();
+				$price1_primary = $product->get_regular_price() . get_woocommerce_currency_symbol();
 				$price1_secondary = "";
 				$price1_class = "price_old";
-				$price2_primary = $product->sale_price . get_woocommerce_currency_symbol();
+				$price2_primary = $product->get_sale_price() . get_woocommerce_currency_symbol();
 				$price2_secondary = "<span class='sale'>/" . __('Reapris', 'understrap') . "</span>";
 				$price2_class = "price_sale";
 			}
 			
 			//Ej REA
 			else{
-				$price1_primary = $product->regular_price . get_woocommerce_currency_symbol();			
+				$price1_primary = $product->get_regular_price() . get_woocommerce_currency_symbol();			
 			}
 		}
 		
@@ -498,7 +498,7 @@ function rvlvr_loop_product_prices() {
 		}
 		
 		// Output set prices
-		
+		//echo "a";
 		echo "<div class='rvlvr_loop_price1 rvlvr_loop_price " .  $price1_class . "'>";
 			echo "<span class='rvlvr_price'>" . $price1_primary . "</span><br />";
 			echo "<span class='rvlvr_price_condition'>" . $price1_secondary . "</span>";	
@@ -753,7 +753,7 @@ function rvlvr_build_menu_products($list, $title, $catid, $break){
 	echo "<a href='" . get_category_link($catid) . "'><b>" . $title . "</b></a>";
 	echo "<ul class='rvlvr_menu_products'>";
 	foreach($list as $item){
-		echo "<li>";			
+		echo "<li>";
 			echo "<a href='" . get_permalink($item->ID). "'>";
 				//var_export($item);
 				echo $item->post_title;
@@ -786,7 +786,7 @@ function rvlvr_build_menu_categories($list, $title = false, $catid, $season = fa
 				
 				if($cat_seasons && in_array($season, $cat_seasons)){
 				echo "<li>";
-					echo "<a href='" .get_category_link($item->term_id) . "'>";
+					echo "<a href='" .get_term_link($item->term_id) . "'>";
 						echo $item->name;
 						//var_export($item);
 					echo "</a>";
@@ -796,9 +796,12 @@ function rvlvr_build_menu_categories($list, $title = false, $catid, $season = fa
 		}
 		else{
 			foreach($list as $item){
-				$item_id = $item->term_id;
+				//$item_id = $item->term_id;
+
 				echo "<li>";
-					echo "<a href='" .get_category_link($item->term_id) . "'>";
+					//echo $item->term_id;
+					//echo get_category_link($item->term_id);
+					echo "<a href='" . get_term_link($item->term_id) . "'>";
 						echo $item->name;
 						//var_export($item);
 					echo "</a>";
@@ -895,6 +898,7 @@ function rvlvr_menu_products(){
 			$cat = $category -> term_id;
 			$subcategories = rvlvr_get_categories($cat);
 			rvlvr_build_menu_categories($subcategories, $title, $cat);
+			//var_export($subcategories)";
 			//echo "id: " . $category->term_id . " " . $category->name;
 			//echo "<br />";
 			//foreach(rvlvr_get_categories($subcategory) as $subcategory){
@@ -1019,7 +1023,7 @@ function rvlvr_featured_products_shortcode( $atts ) {
 		woocommerce_product_loop_start();
 
 		while ( $products->have_posts() ) : $products->the_post();
-			woocommerce_get_template_part( 'content', 'product' );
+			wc_get_template_part( 'content', 'product' );
 		endwhile; // end of the loop.
 		
 		woocommerce_product_loop_end();
@@ -1300,7 +1304,7 @@ function rvlvr_season_warning($product){
 	echo"<pre>";
     foreach ( $attributes as $attribute ) {
         if ( $attribute['is_taxonomy'] ) {
-            $terms = wp_get_post_terms( $product->id, $attribute['name'], 'all' );
+            $terms = wp_get_post_terms( $product->get_the_id(), $attribute['name'], 'all' );
 			foreach ( $terms as $term ) {
                 if($term->description != null){ echo '<span class="attribute-value">' . $term->description . '</span><br /> '; }
             }
@@ -1724,11 +1728,16 @@ function rvlvr_get_customer_billing_fields(){
 //// Check if there is any equipment in cart
 function rvlvr_rent_in_cart(){
 	$cat = get_option('rvlvr_settings')['rvlvr_equipment_cat'];
-	
+	//var_export(WC()->cart->get_cart());
 	// check each cart item for our category
 	foreach ( WC()->cart->get_cart() as $cart_item_key => $values ) {
-	$_product = $values['data'];
-	$terms = get_the_terms( $_product->id, 'product_cat' );
+	
+	/*echo "<pre>";
+		var_export($values['product_id']);
+	
+	echo "</pre>";*/
+	//$_product = $values['data'];
+	$terms = get_the_terms( $values['product_id'], 'product_cat' );
 
 		// second level loop search, in case some items have several categories
 		foreach ($terms as $term) {
@@ -1744,7 +1753,7 @@ function rvlvr_rent_in_cart(){
 			}
 			
 		}
-
+	
 	}
 }
 
@@ -1753,7 +1762,7 @@ function is_rent($product){
 
 	// check each cart item for our category
 	
-	$terms = get_the_terms( $product->id, 'product_cat' );
+	$terms = get_the_terms( $product->get_id(), 'product_cat' );
 
 		// second level loop search, in case some items have several categories
 		foreach ($terms as $term) {

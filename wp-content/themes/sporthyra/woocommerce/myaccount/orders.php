@@ -54,7 +54,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 								</a></div>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
-								<div class="col-xs-7 col-sm-2 order_date"><time datetime="<?php echo date( 'Y-m-d', strtotime( $order->order_date ) ); ?>" title="<?php echo esc_attr( strtotime( $order->order_date ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></time>
+								<div class="col-xs-7 col-sm-2 order_date"><time datetime="<?php echo date( 'Y-m-d', strtotime( $order->get_date_created() ) ); ?>" title="<?php echo esc_attr( strtotime( $order->get_date_created() ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->get_date_created() ) ); ?></time>
 								</div>
 							<?php elseif ( 'order-status' === $column_id ) : ?>
 								<div class="col-xs-5 col-sm-2 order_status">

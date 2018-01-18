@@ -147,14 +147,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 							</p>
 						</div>
 						<div class="col-sm-5 col-xs-12">
-							<p class="form-row"><input type="submit" class="rvlvr_alt button" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" /></p>
+							<p class="form-row"><input type="submit" class="rvlvr_alt button" name="apply_coupon" value="<?php esc_attr_e( 'Använd kupong', 'woocommerce' ); ?>" /></p>
 						</div>
 					</div>
 				</div>
 			
 				<?php do_action( 'woocommerce_cart_coupon' ); ?>
 			<?php } ?>
-				<div class="col-sm-4 col-xs-12 pull-right"><p class="form-row"><input type="submit" class="rvlvr_alt alt-button button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" /></p></div>
+				<div class="col-sm-4 col-xs-12 pull-right"><p class="form-row"><input type="submit" class="rvlvr_alt alt-button button" name="update_cart" value="<?php esc_attr_e( 'Uppdatera kundkorg', 'woocommerce' ); ?>" /></p></div>
 		</div>
 	</div>
 		

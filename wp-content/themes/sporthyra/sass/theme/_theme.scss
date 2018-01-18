@@ -2013,9 +2013,20 @@ legend {
 	height:50px;
 }
 
+// Update fixes 2018-01
 div.debug{
 	display:none;
 	background-color: rgba(0, 0, 0, 0.3);
 	color:#fff;
 }
+.woocommerce-cart .quantity label{
+	display:none !important; 
+}
 
+.order_item ul.wc-item-meta{
+	list-style-type: none;
+	padding-left:15px;
+} 
+.order_item ul.wc-item-meta p{
+	display: inline;
+}

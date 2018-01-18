@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_single_product' );
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div itemscope id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php rvlvr_header("product_title entry_title"); ?>	
 	</header><!-- .entry-header -->

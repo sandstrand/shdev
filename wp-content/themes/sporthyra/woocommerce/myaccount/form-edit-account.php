@@ -46,17 +46,17 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<br /><h3><?=__('Byt lösenord', "understrap");?></h3>
 			<div class="row">			
 				<p class="col-sm-6 col-xs-12 woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-					<label for="password_current"><?php _e( 'Current Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
+					<label for="password_current"><?php _e( 'Nuvarande lösenord', 'woocommerce' ); ?></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" />
 				</p>
 			</div>
 			<div class="row">
 				<p class="col-sm-6 col-xs-12 woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-					<label for="password_1"><?php _e( 'New Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
+					<label for="password_1"><?php _e( 'Nytt lösenord', 'woocommerce' ); ?></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" />
 				</p>
 				<div class="col-sm-6 col-xs-12 woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-					<label for="password_2" class="extra_height"><?php _e( 'Confirm New Password', 'woocommerce' ); ?></label>
+					<label for="password_2" class=""><?php _e( 'Upprepa nytt lösenord', 'woocommerce' ); ?></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" />
 				</div>
 			</div>
@@ -68,7 +68,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<div class="row">
 			<p class="col-sm-4 col-xs-12 pull-right" >
 				<?php wp_nonce_field( 'save_account_details' ); ?>
-				<input type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>" />
+				<input type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Spara', 'woocommerce' ); ?>" />
 				<input type="hidden" name="action" value="save_account_details" />
 			</p>
 			</div>

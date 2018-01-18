@@ -26,7 +26,8 @@ global $post, $product;
 	<div class="row">
 		<div class="col-md-12"><?php
 		if ( has_post_thumbnail() ) {
-			$attachment_count = count( $product->get_gallery_attachment_ids() );
+			//$attachment_count = count( $product->get_gallery_attachment_ids() );
+			$attachment_count = count( $product->get_gallery_image_ids() );
 			$gallery          = $attachment_count > 0 ? '[product-gallery]' : '';
 			$props            = wc_get_product_attachment_props( get_post_thumbnail_id(), $post );
 			$image            = get_the_post_thumbnail( $post->ID, $size='', $attr=array(

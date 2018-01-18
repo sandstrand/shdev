@@ -28,7 +28,7 @@ get_header(); ?>
 					else{
 						//For ANY product archive.
 						//Product taxonomy, product search or /shop landing
- 						woocommerce_get_template( 'archive-product.php' );
+ 						wc_get_template( 'archive-product.php' );
 					}?>
 				
 				</main><!-- #main -->

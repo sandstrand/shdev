@@ -291,7 +291,10 @@ function include_template_function( $template_path ) {
 function rvlvr_get_store_status($store){
 	$customs = get_post_custom($store->id);
 	$status = array();
-	$status = array('store_status' => $customs['rvlvr_store_status'][0], 'store_message' => $customs['rvlvr_store_message'][0]);
+	unset($day_status);		if(isset($customs['rvlvr_store_status'][0])){ $day_status = $customs['rvlvr_store_status'][0]; } else { $day_status=''; }
+	unset($day_message);	if(isset($customs['rvlvr_store_message'][0])){ $day_status = $customs['rvlvr_store_message'][0]; } else { $day_message=''; }
+	
+	$status = array('store_status' => $day_status, 'store_message' => $day_message);
 	//var_export($status);
 	return $status;
 }
@@ -302,7 +305,12 @@ function rvlvr_get_store_days($store){
 		$customs = get_post_custom($store->id);
 		$hours = array();
 		foreach($days as $day){
-			$hours[] = array('day' => $day, 'status' => $customs['rvlvr_store_status_' . $day][0], 'opens' => $customs['rvlvr_store_open_' . $day][0] , 'closes' => $customs['rvlvr_store_close_' . $day][0] , 'message' => $customs['rvlvr_store_message_' . $day][0]);
+			unset($status);		if(isset($customs['rvlvr_store_status_' . $day][0])){ $status = $customs['rvlvr_store_status_' . $day][0]; } else { $status=''; }
+			unset($opens); 		if(isset($customs['rvlvr_store_open_' . $day][0])){ $opens = $customs['rvlvr_store_open_' . $day][0]; } else { $opens=''; }
+			unset($closes); 	if(isset($customs['rvlvr_store_close_' . $day][0])){ $closes = $customs['rvlvr_store_close_' . $day][0]; } else { $closes=''; }
+			unset($message); 	if(isset($customs['rvlvr_store_message_' . $day][0])){ $message = $customs['rvlvr_store_message_' . $day][0]; } else { $message=''; }
+			
+			$hours[] = array('day' => $day, 'status' => $status, 'opens' => $opens , 'closes' => $closes , 'message' => $message );
 			
 		}
 		$debug = false;

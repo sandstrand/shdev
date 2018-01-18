@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <p>
 		<h2><?= __("Visar order #", "understrap") . $order->get_order_number(); ?></h2>
-		<p><?= __("Orderdatum: ", "understrap") . date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?><br />
+		<p><?= __("Orderdatum: ", "understrap") . date_i18n( get_option( 'date_format' ), strtotime( $order->get_date_created() ) ); ?><br />
 		<?= __("Status: ", "understrap") . wc_get_order_status_name( $order->get_status() ); ?></p>
 </p>
 <br />

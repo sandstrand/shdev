@@ -60,8 +60,9 @@ echo "<p>" . __("Här ser du dina sparade kort. Du kan lägga till ytterligare k
 								} else if ( 'expires' === $column_id ) {
 									echo '<span class="col-xs-6">' . esc_html( $method['expires'] );
 									foreach ( $method['actions'] as $key => $action ) {
-										echo ' &nbsp;&nbsp;<a href="' . esc_url( $action['url'] ) . '" class="button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a></span>';
+										echo ' &nbsp;&nbsp;<a href="' . esc_url( $action['url'] ) . '" class="button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 									}
+									echo "</span>";
 								}
 								?>
 								</div>

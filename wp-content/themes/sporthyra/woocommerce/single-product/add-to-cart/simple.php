@@ -44,7 +44,7 @@ if ( ! $product->is_purchasable() ) {
 	 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 	 	<?php
-			echo "<label for='quantity'>" . __('Antal', 'sporthyra') . "</label>";
+			//echo "<label for='quantity'>" . __('Antal', 'sporthyra') . "</label>";
 	 		if ( ! $product->is_sold_individually() ) {
 	 			woocommerce_quantity_input( array(
 	 				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 1, $product ),
@@ -64,7 +64,7 @@ if ( ! $product->is_purchasable() ) {
 
 		</div>
 		<button type="submit" class="col-xs-12 col-sm-3 single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
+	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
 		
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>

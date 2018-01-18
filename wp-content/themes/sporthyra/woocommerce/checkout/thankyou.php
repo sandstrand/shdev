@@ -46,7 +46,7 @@ if ( $order ) : ?>
 			</li>
 			<li class="date">
 				<?php _e( 'Date:', 'woocommerce' ); ?>
-				<strong><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></strong>
+				<strong><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->get_date_created() ) ); ?></strong>
 			</li>
 			<li class="total">
 				<?php _e( 'Total:', 'woocommerce' ); ?>
@@ -59,11 +59,10 @@ if ( $order ) : ?>
 
 	<?php //do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
 
-	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
+	<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
 
 <?php else : ?>
 	
-	<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
+	<p class="woocommerce-thankyou-order-received"><?php //echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
 
 <?php endif; ?>
-aa

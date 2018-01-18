@@ -39,7 +39,7 @@
 					<a id="site-home-link" class="navbar-brand hidden-xs-down" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?= get_template_directory_uri() . "/media/logo_top.png" ?>" /></a>
 					
 					<!-- Secondary nav-->
-					<a href="<?php global $woocommerce; echo $woocommerce->cart->get_cart_url(); ?>">
+					<a href="<?php global $woocommerce; echo wc_get_cart_url(); ?>">
 					<div class="menu_cart hidden-xs-down">
 						
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -51,7 +51,7 @@
 					</a>
 					<div style="float:right;" id="menu_cart_sm" class="hidden-sm-up menu_cart_sm">
 						
-						<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="nav-link">
+						<a href="<?php echo wc_get_cart_url(); ?>" class="nav-link">
 						<span class="fa fa-shopping-cart"><?php 
 						$count = WC()->cart->get_cart_contents_count(); 
 						
@@ -172,7 +172,6 @@
 						<?php rvlvr_menu_season_equipment(); ?>
 					</div>
 					<div id="t_sm_products" class="toggled_menu_div menu_div">
-						
 						<?php rvlvr_menu_products_brands("brands"); ?>
 						<?php rvlvr_menu_products("categories"); ?>			
 					</div>

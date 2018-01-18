@@ -88,7 +88,7 @@ function rvlvr_all_prices_callback() {
 			//var_export($product);
 			//echo "a: " . $product->slug . " :b ";
 			
-			if($product->product_type == 'variable' && $product->get_attribute('pa_rvlvr-condition')) {
+			if($product->get_type() == 'variable' && $product->get_attribute('pa_rvlvr-condition')) {
 				//var_export($product->get_available_variations());							
 				foreach ($product->get_available_variations() as $variation){
 					$prices[] = $variation['attributes']['attribute_pa_rvlvr-condition'] . "  <br /><b>" . $variation['display_price'] . "</b>";		
@@ -188,7 +188,7 @@ function rvlvr_all_prices_callback() {
 										echo "</a>";
 									echo "</div>";
 										 
-									if($product->product_type == 'variable' && $product->get_attribute('pa_rvlvr-condition')) {
+									if($product->get_type() == 'variable' && $product->get_attribute('pa_rvlvr-condition')) {
 										//var_export($product->get_available_variations());							
 										foreach (rvlvr_config()['rvlvr_all_attributes'] as $attribute){
 											if(strpos($attribute['attribute'], 'season') == false || $attribute['attribute'] == $season['attribute']){	
