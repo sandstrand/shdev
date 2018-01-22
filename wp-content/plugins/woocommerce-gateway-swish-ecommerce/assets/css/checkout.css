@@ -1,0 +1,71 @@
+.rotate {
+    -webkit-animation: spin 4s infinite linear;
+    animation: spin 4s infinite linear;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+#redlight-swish-popup_wraper{
+	display: none;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:9999;
+	background:rgba(255,255,255,1);
+}
+
+.redlight-swish-popup_wraper{
+	top:50%;
+	left:50%;
+	width:100%;
+	min-height: 80%;
+	padding:30px;
+	display: block;
+	border-radius:30px;
+	position: absolute;
+	max-width: 67.141em;
+	/* border:1px solid #ccc; */
+	background:rgba(255,255,255,0.9);
+	-webkit-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+}
+
+.redlight-swish-popup_content_wrap{
+	font-size: 20px;
+	max-width:410px;
+}
+
+.redlight-swish-popup_content_wrap .woocommerce-info,
+.redlight-swish-popup_content_wrap .woocommerce-error {
+	display: block;
+	padding: 5px;
+	line-height: 1.5em;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.swish-button{
+	display:none;
+}
+.redlight-swish-popup_message .button {
+    margin: 1em 0;
+}
+@media (max-width: 720px) {
+	.swish-button{
+		display:block;
+	}
+ }

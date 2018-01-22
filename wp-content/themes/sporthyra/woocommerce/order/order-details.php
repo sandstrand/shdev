@@ -36,6 +36,9 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	</thead>
 	<tbody>
 		<?php
+		
+		
+			
 			foreach( $order->get_items() as $item_id => $item ) {
 				$product = apply_filters( 'woocommerce_order_item_product', $order->get_product_from_item( $item ), $item );
 
@@ -48,10 +51,12 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 					'product'	         => $product,
 				) );
 			}
+			
 		?>
 		<?php do_action( 'woocommerce_order_items_table', $order ); ?>
 	</tbody>
 </table>
+
 <table width="100%" class="order_details order_totals">
 	<tfoot><?php
 			foreach ( $order->get_order_item_totals() as $key => $total ) {

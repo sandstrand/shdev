@@ -1395,6 +1395,7 @@ function rvlvr_earliest_delivery($fetch = false){
 }
 
 function rvlvr_checkout_delivery_date( $checkout ) {
+
     if(rvlvr_rent_in_cart()){
 		echo "<div class='col-xs-12 form-content-margin'>";
 			
@@ -1518,10 +1519,10 @@ function rvlvr_order_meta( $order_id ) {
         update_post_meta( $order_id, 'order_delivery_note', $_POST['order_delivery_note']  );
     }
 	
-	if ( ! empty( $_POST['pickup_location'][0] ) ) {
+	if ( ! empty( $_POST['pickup_location'][1] ) ) {
         update_post_meta( $order_id, 'pickup_location_1', $_POST['pickup_location'][0]  );
     }
-	if ( ! empty( $_POST['pickup_location'][1] ) ) {
+	if ( ! empty( $_POST['pickup_location'][2] ) ) {
         update_post_meta( $order_id, 'pickup_location_2', $_POST['pickup_location'][1]  );
     }
 }
@@ -1530,15 +1531,15 @@ function rvlvr_order_meta( $order_id ) {
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'rvlvr_display_admin_order_meta', 10, 1 );
 
 function rvlvr_display_admin_order_meta($order){
-    if(get_post_meta( $order->id, 'order_delivery_date', true )){
-		echo '<p><strong>'.__('Leveransdatum').':</strong> ' . get_post_meta( $order->id, 'order_delivery_date', true ) . '</p>';
+    if(get_post_meta( $order->get_id(), 'order_delivery_date', true )){
+		echo '<p><strong>'.__('Leveransdatum').':</strong> ' . get_post_meta( $order->get_id(), 'order_delivery_date', true ) . '</p>';
 	}
-	elseif(get_post_meta( $order->id, 'Leveransdatum', true )){
-		echo '<p><strong>'.__('Leveransdatum').':</strong> ' . get_post_meta( $order->id, 'Leveransdatum', true ) . '</p>';
+	elseif(get_post_meta( $order->get_id(), 'Leveransdatum', true )){
+		echo '<p><strong>'.__('Leveransdatum').':</strong> ' . get_post_meta( $order->get_id(), 'Leveransdatum', true ) . '</p>';
 	}
 	
-	if(get_post_meta( $order->id, 'order_delivery_note', true )){
-		echo '<p><strong>'.__('Returdatum').':</strong><br /> ' . get_post_meta( $order->id, 'order_delivery_note', true ) . '</p>';
+	if(get_post_meta( $order->get_id(), 'order_delivery_note', true )){
+		echo '<p><strong>'.__('Returdatum').':</strong><br /> ' . get_post_meta( $order->get_id(), 'order_delivery_note', true ) . '</p>';
 	}
 		
 }
@@ -1585,7 +1586,8 @@ function rvlvr_add_recipients($recipient, $order){
 	
 	return $recipient;
 }
-add_filter( 'woocommerce_email_recipient_new_order', 'rvlvr_add_recipients', 10, 2 );
+//commented 2018-1 pending new pickup plus
+//add_filter( 'woocommerce_email_recipient_new_order', 'rvlvr_add_recipients', 10, 2 );
 
 //// Better labels and such 
 // Hook in
@@ -1730,13 +1732,10 @@ function rvlvr_rent_in_cart(){
 	$cat = get_option('rvlvr_settings')['rvlvr_equipment_cat'];
 	//var_export(WC()->cart->get_cart());
 	// check each cart item for our category
-	foreach ( WC()->cart->get_cart() as $cart_item_key => $values ) {
 	
-	/*echo "<pre>";
-		var_export($values['product_id']);
+	foreach ( WC()->cart->get_cart() as $values ) {
+
 	
-	echo "</pre>";*/
-	//$_product = $values['data'];
 	$terms = get_the_terms( $values['product_id'], 'product_cat' );
 
 		// second level loop search, in case some items have several categories
@@ -1746,15 +1745,18 @@ function rvlvr_rent_in_cart(){
 			
 			if ( get_ancestors( $_categoryid, 'product_cat' )[0] == $cat ) {
 				//category is in cart!
-				return true;
+				//echo "true";
+				$rent = true;
+				
 			}
 			else{ 
-				return false;
+				
+
 			}
-			
 		}
 	
 	}
+	if($rent == true){ return true; } else { return false; }
 }
 
 function is_rent($product){
@@ -1891,7 +1893,7 @@ function custom_gift_card__order_meta_keys($fields, $sent_to_admin, $order ) {
 	'class' => array('form-row-last'),
 	'clear' => true
 	);
-	$fields["personnr"]["value"] = get_user_meta($order->user_id, 'billing_personnr', true) ;
+	$fields["personnr"]["value"] = get_user_meta($order->get_user_id(), 'billing_personnr', true) ;
 	//$fields["gift_card_comments"]["value"] = get_post_meta( $order->id, 'Gift Card Comments', true );
 	return $fields;
 }
@@ -1901,11 +1903,11 @@ add_filter( 'woocommerce_email_customer_details_fields', 'custom_gift_card__orde
 function custom_woocommerce_email_order_meta_fields( $fields, $sent_to_admin, $order ) {
     $fields['order_delivery_date'] = array(
         'label' => 'Leveransdatum',
-        'value' => get_post_meta( $order->id, 'order_delivery_date', true ),
+        'value' => get_post_meta( $order->get_id(), 'order_delivery_date', true ),
     );
     $fields['order_delivery_notes'] = array(
         'label' => 'Retur av utrustning',
-        'value' => get_post_meta( $order->id, 'order_delivery_note', true ),
+        'value' => get_post_meta( $order->get_id(), 'order_delivery_note', true ),
     );
 	
 
@@ -1978,4 +1980,77 @@ function custom_login_page() {
 if(!is_user_logged_in()){
  add_action('init','custom_login_page');
 }
+
+
+/** 
+ * Register new status
+ * Tutorial: http://www.sellwithwp.com/woocommerce-custom-order-status-2/
+**/
+function register_returned_order_status() {
+    register_post_status( 'wc-returned', array(
+        'label'                     => 'Returnerad',
+        'public'                    => true,
+        'exclude_from_search'       => false,
+        'show_in_admin_all_list'    => true,
+        'show_in_admin_status_list' => true,
+        'label_count'               => _n_noop( 'Returnerade <span class="count">(%s)</span>', 'Returnerade <span class="count">(%s)</span>' )
+    ) );
+}
+add_action( 'init', 'register_returned_order_status' );
+
+// Add to list of WC Order statuses
+function add_returned_to_order_statuses( $order_statuses ) {
+
+    $new_order_statuses = array();
+
+    // add new order status after processing
+    foreach ( $order_statuses as $key => $status ) {
+
+        $new_order_statuses[ $key ] = $status;
+
+        if ( 'wc-completed' === $key ) {
+            $new_order_statuses['wc-returned'] = 'Returnerad';
+        }
+    }
+
+    return $new_order_statuses;
+}
+add_filter( 'wc_order_statuses', 'add_returned_to_order_statuses' );
+
+add_action('admin_head', 'my_add_status_icons');
+
+function my_add_status_icons() {
+	echo "<style>
+	
+		.column-order_status mark.returned::after {
+			font-family: WooCommerce;
+    		speak: none;
+    		font-weight: 400;
+    		font-variant: normal;
+    		text-transform: none;
+    		line-height: 1;
+    		-webkit-font-smoothing: antialiased;
+    		margin: 0;
+    		text-indent: 0;
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+	   	 	text-align: center;
+	   	 	color: #73a724;
+			content: '\\e015'; 
+		}
+		.column-order_status mark.failed::after{
+ 	   	 	color: #a00 !important;
+ 		}
+		.column-order_status mark.processing::after{
+ 	   	 	color: #ffba00 !important;
+ 		}
+
+		</style>"; 
+
+}
+
+
 ?>

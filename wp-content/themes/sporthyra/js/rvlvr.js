@@ -194,6 +194,8 @@ jQuery(document).ready(function ($) {
 
 });
 
+
+
 /////// Fonts
 
 /*
@@ -239,6 +241,84 @@ a:for(;i<browLen;i++){var regex=new RegExp(browsers[i].regex);if(regex.test(navi
 for(var fonts=[{fontFamily:"Nexa-BlackItalic",url:wfpath+"3277C8_0"+suffix+"_0."+webfontType},{fontFamily:"Nexa-Black",url:wfpath+"3277C8_1"+suffix+"_0."+webfontType},{fontFamily:"Nexa-Heavy",url:wfpath+"3277C8_2"+suffix+"_0."+webfontType},{fontFamily:"Nexa-Regular",url:wfpath+"3277C8_3"+suffix+"_0."+webfontType}],len=fonts.length,css="",i=0;i<len;i++){var format="svg#wf"==webfontType?'format("svg")':"ttf"==webfontType?'format("truetype")':"eot"==webfontType?"":'format("'+webfontType+'")',css=css+
 ("@font-face{font-family: "+fonts[i].fontFamily+";src:url("+fonts[i].url+")"+format+";");fonts[i].fontWeight&&(css+="font-weight: "+fonts[i].fontWeight+";");fonts[i].fontStyle&&(css+="font-style: "+fonts[i].fontStyle+";");css+="}"}stylesheet.styleSheet?stylesheet.styleSheet.cssText=css:stylesheet.innerHTML=css;
 
+
+///// Payment fixes
+
+jQuery(document).ready(function ($) {
+	console.log('loaded');
+	function show_billing(){
+		$('.logged_in_hidden').show();
+		$('.saved_billing').hide();;
+	
+	}
+	function show_billing_disclaimer(){
+		$('.billing_disclaimer').slideDown();
+	}	
+	function hide_billing_disclaimer(){
+		$('.billing_disclaimer').slideUp();
+	}	
+	function fetch_billing(){
+			
+	}
+
+	function update_pnr($value){
+		console.log($value);
+		$('#pp_billing_ssn').val($value);
+		$('#iv_billing_ssn').val($value);
+		$('#billing_personnr').val($value);
+	}	
+	
+	$(document).on("change", '#pp_billing_ssn', function(){
+		$value = $( this ).val();
+		update_pnr( $value ); 
+	});
+	$(document).on("change", '#iv_billing_ssn', function(){
+		$value = $( this ).val();
+		update_pnr( $value ); 
+	});
+	$(document).on("change", '#billing_personnr', function(){
+		$value = $( this ).val();
+		update_pnr( $value ); 
+	});
+
+
+
+	$(document).on('click', '.payment_method_sveawebpay_part_pay', function(){
+		show_billing_disclaimer();
+	});
+	$(document).on('click', '#payment_method_sveawebpay_part_pay', function(){
+		show_billing_disclaimer();
+	});
+	
+	$(document).on('click', '.payment_method_sveawebpay_invoice', function(){
+		show_billing_disclaimer();
+	});
+	$(document).on('click', '#payment_method_sveawebpay_invoice', function(){
+		show_billing_disclaimer();
+	});
+
+	$(document).on('click', '.payment_method_stripe', function(){
+		hide_billing_disclaimer();
+	});
+	$(document).on('click', '#payment_method_stripe', function(){
+		hide_billing_disclaimer();
+	});
+
+
+	$(document).on('click', '.payment_method_redlight_swish-ecommerce', function(){
+		hide_billing_disclaimer();
+	});	
+	$(document).on('click', '#payment_method_redlight_swish-ecommerce', function(){
+		hide_billing_disclaimer();
+	});
+
+	
+	$(document).on('click', '.update_billing', function(evt){
+		evt.preventDefault();
+		show_billing();
+	});
+
+});
 
 ////// Delivery dates
 

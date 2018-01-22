@@ -4,7 +4,7 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/emails/email-order-details.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * HOWEVER, on occasion WooCommerce will need to up template files and you
  * (the theme developer) will need to copy the new files to your theme to
  * maintain compatibility. We try to do this as little as possible, but it does
  * happen. When this occurs the version of the template file will be bumped and
@@ -25,9 +25,12 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 
 ?>
 <?php if ( ! $sent_to_admin ) : ?>
-	<h2><?php printf( __( 'Order #%s', 'woocommerce' ), $order->get_order_number() ); ?></h2>
+	<h2>
+	<?php printf( __( 'Order #%s', 'woocommerce' ), $order->get_order_number() ); ?><br /> 
+	<?php printf( '<time datetime="%s">%s</time>', date_i18n( 'c', strtotime( $order->get_date_created() ) ), date_i18n( wc_date_format(), strtotime( $order->get_date_created() ) ) ); ?>
+	</h2>
 <?php else : ?>
-	<h2><a class="link" href="<?php echo esc_url( admin_url( 'post.php?post=' . $order->id . '&action=edit' ) ); ?>"><?php printf( __( 'Order #%s', 'woocommerce'), $order->get_order_number() ); ?></a> (<?php printf( '<time datetime="%s">%s</time>', date_i18n( 'c', strtotime( $order->order_date ) ), date_i18n( wc_date_format(), strtotime( $order->order_date ) ) ); ?>)</h2>
+	<h2><a class="link" href="<?php echo esc_url( admin_url( 'post.php?post=' . $order->get_id() . '&action=edit' ) ); ?>"><?php printf( __( 'Order #%s', 'woocommerce'), $order->get_order_number() ); ?></a> (<?php printf( '<time datetime="%s">%s</time>', date_i18n( 'c', strtotime( $order->get_date_created() ) ), date_i18n( wc_date_format(), strtotime( $order->get_date_created() ) ) ); ?>)</h2>
 <?php endif; ?>
 
 <table class="td" cellspacing="0" cellpadding="6" style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" border="1">
@@ -39,13 +42,15 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 		</tr>
 	</thead>
 	<tbody>
-		<?php echo $order->email_order_items_table( array(
+		<?php 
+			echo wc_get_email_order_items($order, array(
 			'show_sku'      => $sent_to_admin,
 			'show_image'    => false,
 			'image_size'    => array( 32, 32 ),
 			'plain_text'    => $plain_text,
 			'sent_to_admin' => $sent_to_admin
-		) ); ?>
+		))
+		; ?>
 	</tbody>
 	<tfoot>
 		<?php

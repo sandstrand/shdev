@@ -1,0 +1,410 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Swish Ecommerce Gateway\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-30 21:23+0000\n"
+"POT-Revision-Date: Sun Apr 10 2016 12:21:06 GMT+0200 (VÃ¤steuropa, sommartid)"
+"\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: gateway-swish.php:160
+msgid ""
+"Extends WooCommerce. Provides a <a href='http://www.getswish.se/handel' "
+"target='_blank'>Swish Handel</a> gateway for WooCommerce."
+msgstr ""
+
+#: gateway-swish.php:161
+msgid "Swish Handel"
+msgstr ""
+
+#: gateway-swish.php:232
+msgid ""
+"cURL is not installed on server. This is needed for the plugin to function "
+"properly"
+msgstr ""
+
+#: gateway-swish.php:238
+#, php-format
+msgid ""
+"License key for <strong>%s</strong> is invalid. Please ensure that you have "
+"<a href=\"%s\">entered a valid license key.</a>"
+msgstr ""
+
+#: gateway-swish.php:296
+msgid "To pay with Swish"
+msgstr ""
+
+#: gateway-swish.php:297
+msgid "To complete your order you need to do the following ."
+msgstr ""
+
+#: gateway-swish.php:300
+#, php-format
+msgid "In your payment request you will see our name <strong>%s</strong>"
+msgstr ""
+
+#: gateway-swish.php:326
+#, php-format
+msgid "Payment for order %s"
+msgstr ""
+
+#: gateway-swish.php:378
+msgid "Awaiting swish payment"
+msgstr ""
+
+#: gateway-swish.php:393 gateway-swish.php:586
+msgid "PayeePaymentReference is invalid"
+msgstr ""
+
+#: gateway-swish.php:396 gateway-swish.php:589
+msgid "Callback URL is missing or does not use Https"
+msgstr ""
+
+#: gateway-swish.php:399 gateway-swish.php:402 gateway-swish.php:592
+#: gateway-swish.php:595
+msgid "Payer alias is invalid"
+msgstr ""
+
+#: gateway-swish.php:405 gateway-swish.php:598
+msgid "Payee alias is missing or empty"
+msgstr ""
+
+#: gateway-swish.php:408 gateway-swish.php:601
+msgid "Amount value is missing or not a valid number"
+msgstr ""
+
+#: gateway-swish.php:411 gateway-swish.php:604
+msgid "Amount value is too low"
+msgstr ""
+
+#: gateway-swish.php:414 gateway-swish.php:607
+msgid "Amount value is too large"
+msgstr ""
+
+#: gateway-swish.php:417 gateway-swish.php:610
+msgid "Invalid or missing Currency"
+msgstr ""
+
+#: gateway-swish.php:420 gateway-swish.php:613
+msgid "Wrong formatted message"
+msgstr ""
+
+#: gateway-swish.php:423 gateway-swish.php:616
+msgid ""
+"Another active PaymentRequest already exists for this payerAlias. Only "
+"applicable for E-Commerce."
+msgstr ""
+
+#: gateway-swish.php:426 gateway-swish.php:619
+msgid "Payer not Enrolled"
+msgstr ""
+
+#: gateway-swish.php:429 gateway-swish.php:622
+msgid "Counterpart is not activated"
+msgstr ""
+
+#: gateway-swish.php:432 gateway-swish.php:625
+msgid "Payee not Enrolled"
+msgstr ""
+
+#: gateway-swish.php:435 gateway-swish.php:628
+msgid "Transaction declined"
+msgstr ""
+
+#: gateway-swish.php:438 gateway-swish.php:631
+msgid "Payer cancelled BankId signing"
+msgstr ""
+
+#: gateway-swish.php:441 gateway-swish.php:634
+msgid "BankID already in use"
+msgstr ""
+
+#: gateway-swish.php:444 gateway-swish.php:637
+msgid "Bank system processing error"
+msgstr ""
+
+#: gateway-swish.php:447 gateway-swish.php:640
+msgid "Swish timed out before the payment was started"
+msgstr ""
+
+#: gateway-swish.php:450 gateway-swish.php:643
+msgid ""
+"Swish timed out waiting for an answer from the banks after payment was "
+"started. Note:If this happens Swish has no knowledge of whether the payment "
+"was successful or not. The Merchant should inform its consumer about this "
+"and recommend them to check with their bank about the status of this payment."
+msgstr ""
+
+#: gateway-swish.php:453 gateway-swish.php:646
+msgid "An error has accured"
+msgstr ""
+
+#: gateway-swish.php:533
+#, php-format
+msgid "Refund for order %s"
+msgstr ""
+
+#: gateway-swish.php:666
+msgid "Klarna Checkout - External Payment Method - Swish"
+msgstr ""
+
+#: gateway-swish.php:670
+msgid "Show Swish in Klarna Checkout"
+msgstr ""
+
+#: gateway-swish.php:673
+msgid "This will display as an external payment method in Klarna Checkout"
+msgstr ""
+
+#: gateway-swish.php:676
+msgid "Name"
+msgstr ""
+
+#: gateway-swish.php:678
+msgid ""
+"Title for Swish payment method. This controls the title which the user sees "
+"in the checkout form."
+msgstr ""
+
+#: gateway-swish.php:682
+msgid "Image url"
+msgstr ""
+
+#: gateway-swish.php:684
+msgid "The url to the Swish payment Icon."
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:12
+msgid "License information"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:16
+msgid "License key"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:18
+msgid "Enter the license key you recived when purschasing this plugin."
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:21
+msgid "Deactivate this license"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:27
+msgid "Settings"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:31
+msgid "Enable / Disable"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:32
+msgid "Enable this payment gateway"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:37
+msgid "Title"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:39
+msgid "Enter the name you want displayed for the user."
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:40
+msgid "Swish"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:43
+msgid "Description"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:45
+msgid "Enter the description you want shown to the user at checkout."
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:46
+msgid ""
+"When you choose to pay with Swish, open your Swish-app and make sure the "
+"prefilled data is correct. You approve the purchase with Mobile BankID and "
+"recive a confirmation of the purchase"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:49
+msgid "Message"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:51
+msgid ""
+"Message that will appear on the \"Thank you for your order \" and the e-mail "
+"message."
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:52
+msgid ""
+"To complete your order you need to do the following.<br/> 1.Open your Swish-"
+"app. <br/> 2.Make sure the prefilled data is correct.<br/>3.Sign with Mobile "
+"BankID"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:56
+msgid "Your Swish number"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:58
+msgid "Enter the number you received when you joined Swish ."
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:61
+msgid "Certificate"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:64
+#, php-format
+msgid "cURL is using <code>%s</code><p>Server root is:<code>%s</code></p>"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:67
+#: includes/settings-swish-ecommerce.php:68
+msgid "Use another callbackurl"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:71
+msgid ""
+"If this is checked the Swish will send a notice to a diffrent url to set the "
+"orderstatus."
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:74
+msgid "Alternative CallbackURL"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:76
+msgid "CallbackURL"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:78
+msgid ""
+"This URL will be used to send the callback to. This is useful for shared SSL "
+"certifikates. Make sure you add an trailing slash. Example: <code>https:"
+"//mindoman-se.loopiasecure.com/</code>"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:81
+msgid "Show / Hide description"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:82
+msgid "Show description"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:87
+msgid "Description of your Swish account"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:89
+msgid "Example: Company Inc"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:94
+msgid "Debug Log"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:96
+msgid "Enable logging"
+msgstr ""
+
+#: includes/settings-swish-ecommerce.php:98
+#, php-format
+msgid "Log Swish events, such as API requests, inside <code>%s</code>"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:39
+msgid "We will redirect you in"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:40
+msgid "seconds"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:41
+msgid "Payment failed"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:42
+msgid "Return to checkout"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:43
+msgid "We have recived your payment"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:44
+msgid "We will take you to the order-conformation page, hang tight"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:85
+msgid "Open Swish-app"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:86
+msgid "If the button doesnt work, you can always open the swish-app manually"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-popup.php:92
+#, php-format
+msgid ""
+"We are currently awaiting your payment, please proceed to open your Swish-"
+"app connected to <strong>%s</strong> and finalize your payment."
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-api-handler.php:89
+msgid "Swish API payment completed"
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-api-handler.php:111
+msgid "Error from Swish API. Payment declined."
+msgstr ""
+
+#: includes/class-wc-gateway-swish-ecommerce-api-handler.php:120
+#, php-format
+msgid "Error from Swish API. %s: %s."
+msgstr ""
+
+#. Name of the plugin
+msgid "WooCommerce Swish Ecommerce Gateway"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Extends WooCommerce. Provides a <a href=\"http://www.getswish.se/\" "
+"target=\"_blank\">Swish Handel</a> gateway for WooCommerce."
+msgstr ""
+
+#. URI of the plugin
+msgid "http://redlight.se/swish"
+msgstr ""
+
+#. Author of the plugin
+msgid "Redlight Media"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://redlight.se/"
+msgstr ""

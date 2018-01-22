@@ -24,7 +24,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-
 <div class='form-wrapper'>
 <div class="woocommerce-billing-fields form-content">
 		
@@ -59,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 						<div class="create-account">
 
-							<p class="col-xs-12"><?php _e( 'Create an account by entering the information below. If you are a returning customer please login at the top of the page.', 'woocommerce' ); ?></p>
+							<p class="col-xs-12"><?php _e( 'Ett konto kommer att skapas åt dig. Om du är en återvändande kund så loggar du in på toppen avden här sidan', 'woocommerce' ); ?></p>
 
 							<?php foreach ( $checkout->checkout_fields['account'] as $key => $field ) : ?>
 
@@ -82,19 +81,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 		if ( rvlvr_customer_has_billing_fields() && is_user_logged_in() ){
 			
-			echo "<div style='margin-bottom:5px;' class=row>";
+			echo "<div style='margin-bottom:5px;' class='row saved_billing'>";
 			//var_export(rvlvr_get_customer_billing_fields());
 			foreach(rvlvr_get_customer_billing_fields() as $key){
 				echo "<div class='col-xs-12 " .  $key['class'] . "'><span class='billing_label'>" . $key['title'] . ": </span><span class='billing_detail'>" . $key['value'] . "</span></div>";
 			}
+			echo "<div class='col-xs-12'><p style='margin-top:5px;' ><a class='update_billing' href=" . "#" . ">Uppdatera uppgifter</a></p></div>";
 			echo "</div>";
-			echo "<p><a href=" . "/dina-sidor/uppdatera-konto/billing/" . ">Uppdatera uppgifter</a></p>";
+			
 			
 			echo "Är det här inte du? <a href=" . wp_logout_url( get_permalink()) . ">Logga ut</a> för att byta eller skapa en ny användare.";
 		}	
 
 	?>
-
+ 
 </div>
 </div>
 <?php  ?>

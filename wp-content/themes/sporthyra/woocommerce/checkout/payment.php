@@ -56,7 +56,8 @@ if ( ! is_ajax() ) {
 
 						<?php wp_nonce_field( 'woocommerce-process_checkout' ); ?>
 					</div>
-				<div class="row">
+				<div class="row">	
+				<div class='col-xs-12 billing_disclaimer' style='display:none; margin-top:5px; margin-bottom:10px;'><p>Obs! Med dena betalningsmetod kommer alltid uppgifter att hämtas från folkbokföringsregistret.</p></div>
 				<div class="col-xs-12"><?php wc_get_template( 'checkout/terms.php' ); ?></div>
 				<div class="col-xs-12 col-sm-4 pull-right">
 					<?php echo apply_filters( 'woocommerce_order_button_html', '<button name="woocommerce_checkout_place_order" id="place_order"><i class="fa fa-lock" aria-hidden="true"></i> ' . esc_attr( $order_button_text ) . '</button>'); ?>

@@ -1,0 +1,13 @@
+{
+  "name": "woocommerce-gateway-svea-webpay",
+  "version": "2.9.3",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-watch": "^4.3.5"
+  }
+}

@@ -925,9 +925,15 @@ function spot_admin() {
 }
 function display_spot_box( $post ) {
 ?>			
-	<label for="rvlvr_spot_url"><?php _e( 'Where does the spot lead? Full URL', 'rvlvr' ); ?></label>
+	<label for="rvlvr_spot_url"><?php _e( 'Var leder puffen? Full URL', 'rvlvr' ); ?></label>
 	<input type="text" name="rvlvr_spot_url" value="<?php echo esc_html( get_post_meta( $post->ID, 'rvlvr_spot_url', true ) )?>" /><br />
+	
+	<label for="rvlvr_spot_desc"><?php _e( 'Ingress', 'rvlvr' ); ?></label>
+	<input type="text" name="rvlvr_spot_desc" value="<?php echo esc_html( get_post_meta( $post->ID, 'rvlvr_spot_desc', true ) )?>" /><br />
 
+	<label for="rvlvr_spot_size"><?php _e( 'Storlek', 'rvlvr' ); ?></label>
+	<input type="text" name="rvlvr_spot_size" value="<?php echo esc_html( get_post_meta( $post->ID, 'rvlvr_spot_size', true ) )?>" /><br />
+	<p>Ange storlek i klass: md-6 md-12 etc..</p>
 	
 <?php
 }
@@ -939,6 +945,9 @@ function add_spot_fields( $post_id, $post ) {
     if ( $post->post_type == 'spot' ) {
         // Store data in post meta table if present in post data
         if ( isset( $_POST['rvlvr_spot_url'] ) && $_POST['rvlvr_spot_url'] != '' ) { update_post_meta( $post_id, 'rvlvr_spot_url', $_POST['rvlvr_spot_url'] ); }	
+        if ( isset( $_POST['rvlvr_spot_desc'] ) && $_POST['rvlvr_spot_desc'] != '' ) { update_post_meta( $post_id, 'rvlvr_spot_desc', $_POST['rvlvr_spot_desc'] ); }	
+        if ( isset( $_POST['rvlvr_spot_size'] ) && $_POST['rvlvr_spot_size'] != '' ) { update_post_meta( $post_id, 'rvlvr_spot_size', $_POST['rvlvr_spot_size'] ); }
+        if ( isset( $_POST['rvlvr_spot_title'] ) && $_POST['rvlvr_spot_title'] != '' ) { update_post_meta( $post_id, 'rvlvr_spot_title', $_POST['rvlvr_spot_title'] ); }		
     }
 }
 
@@ -960,9 +969,7 @@ function rvlvr_spots_func($atts) {
 	$args = array(
 		'post_type'     => 'spot',
 		'post_status' => 'publish',
-		'posts_per_page' => $per_page,
-		'orderby' => $orderby,
-		'order' => $order
+		'posts_per_page' => $per_page
 	
 	);
 	ob_start();
@@ -971,7 +978,22 @@ function rvlvr_spots_func($atts) {
 		echo "<ul>";	
 		while ( $spots->have_posts() ) : $spots->the_post();
 			$customs=get_post_custom(get_the_id());
-			echo "<li class='col-md-3 col-sm-6'><a href='" . $customs['rvlvr_spot_url'][0] . "'>" . get_the_post_thumbnail() . "</a></li>";
+			echo "<li class='" . $customs['rvlvr_spot_size'][0] . " rvlvr_spot'><div>";
+			echo "<a href='" . $customs['rvlvr_spot_url'][0] . "'>";
+			echo get_the_post_thumbnail();
+			
+			if(isset($customs['rvlvr_spot_title'][0]) && !empty($customs['rvlvr_spot_title'][0])){
+				echo "<h3>" . $customs['rvlvr_spot_title'][0] . "</h3>"; 
+			}
+			if(isset($customs['rvlvr_spot_desc'][0]) && !empty($customs['rvlvr_spot_desc'][0])){
+				echo "<div class='rvlvr_spot_content'>";
+				echo "<p>" . $customs['rvlvr_spot_desc'][0] . "</p>"; 
+				echo "<div>";
+			}
+
+			echo "</a>";
+			
+			echo "</div></li>";
         endwhile; // end of the loop.
 		echo "</ul>";
 	endif;	
