@@ -2104,8 +2104,10 @@ li.wc_payment_method .payment_box{
 li.wc_payment_method .payment_box input[type=radio]{  
 	margin-left: 15px !important ;  
 	//padding-right:15px;
-
-
+}
+#wc-stripe-cc-form, .woocommerce-SavedPaymentMethods-saveNew{
+	padding-left:15px;
+	padding-right:15px;
 }
 li.wc_payment_method .payment_box label, .woocommerce-checkout .entry-content #payment .payment_box label{ 
 	max-width:calc(100% - 60px) !important; 

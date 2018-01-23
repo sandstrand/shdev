@@ -1587,7 +1587,7 @@ function rvlvr_add_recipients($recipient, $order){
 	return $recipient;
 }
 //commented 2018-1 pending new pickup plus
-//add_filter( 'woocommerce_email_recipient_new_order', 'rvlvr_add_recipients', 10, 2 );
+add_filter( 'woocommerce_email_recipient_new_order', 'rvlvr_add_recipients', 10, 2 );
 
 //// Better labels and such 
 // Hook in
