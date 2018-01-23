@@ -1,0 +1,271 @@
+# Copyright (C) 2016 WooThemes / SkyVerge
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Local Pickup Plus 1.13.3\n"
+"Report-Msgid-Bugs-To: https://woocommerce.com/my-account/tickets/\n"
+"POT-Creation-Date: 2014-06-15 22:41:29+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: classes/admin/class-wc-shipping-local-pickup-plus-shop-order-cpt.php:77
+#: classes/class-wc-shipping-local-pickup-plus.php:383
+#: classes/class-wc-shipping-local-pickup-plus.php:1651
+msgid "Pickup Locations"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:83
+msgid "Local Pickup Plus"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:85
+msgid ""
+"Local pickup is a simple method which allows the customer to pick up their "
+"order themselves at a specified pickup location."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:177
+msgid "from"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:241
+msgid "All Categories"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:253
+msgid "Enable"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:255
+msgid "Enable local pickup plus"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:260
+msgid "Title"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:262
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:263
+msgid "Local Pickup"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:267
+#: classes/class-wc-shipping-local-pickup-plus.php:396
+msgid "Cost"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:269
+msgid ""
+"Default cost excluding tax. Enter an amount, e.g. 2.50, or leave empty for "
+"no default cost.  The default cost can be overriden by setting a cost per "
+"pickup location below."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:274
+msgid "Discount"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:276
+msgid ""
+"Discount for choosing Local Pickup as the shipping option.  Enter an "
+"amount, e.g. 2.50, or a percentage, e.g 5% to discount the order total "
+"(pre-tax) when this shipping method is used."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:281
+msgid "Categories"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:283
+msgid "Optional, these categories of products may only be locally picked up."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:289
+msgid "Categories Only"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:291
+msgid ""
+"Allow local pickup only for the product categories listed above, all other "
+"product categories must be shipped via another method"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:296
+msgid "Pickup Location Tax"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:298
+msgid ""
+"When this shipping method is chosen, apply the tax rate based on the pickup "
+"location than for the customer's given address."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:303
+msgid "Hide Shipping Address"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:305
+msgid "Hide the shipping address when local pickup plus is selected at checkout."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:310
+msgid "Pickup Location Styling"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:312
+msgid "Dropdown"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:312
+msgid "Radio Buttons"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:314
+msgid "Styling of pickup location options on checkout."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:323
+#. translators: %1$s - <a> tag, %2$s - </a> tag
+msgid ""
+"To enable discounts for Local Pickup orders, you must first %1$senable the "
+"use of coupons%2$s"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:397
+msgid ""
+"Cost for this pickup location, enter an amount, eg. 0 or 2.50, or leave "
+"empty to use the default cost configured above."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:402
+msgid "Notes"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:403
+msgid ""
+"Free-form notes to be displayed below the pickup location on "
+"checkout/receipt.  HTML content is allowed."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:410
+msgid "+ Add Pickup Location"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:411
+msgid "Delete Pickup Location"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:443
+#: classes/class-wc-shipping-local-pickup-plus.php:448
+#: classes/class-wc-shipping-local-pickup-plus.php:449
+#: classes/class-wc-shipping-local-pickup-plus.php:486
+#: classes/class-wc-shipping-local-pickup-plus.php:491
+#: classes/class-wc-shipping-local-pickup-plus.php:492
+msgid "(Optional)"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:500
+msgid "Delete the selected pickup locations?"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:655
+msgid "Pickup"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1111
+msgid "Your Pickup Location"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1111
+msgid "Choose Pickup Location"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1128
+msgid "Choose One"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1217
+msgid "Please select a local pickup location"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1274
+msgid ""
+"Some of your cart products are not eligible for local pickup, please remove "
+"%s, or select a different shipping method to continue"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1281
+#. translators: %1$s - list of eligible products, %2$s - Local Pickup plus
+#. shipping method name
+msgid ""
+"Some of your cart products are only eligible for local pickup, please "
+"remove %1$s, or change the shipping method to %2$s to continue"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1309
+#: classes/class-wc-shipping-local-pickup-plus.php:1311
+msgid "Free"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1387
+#: classes/class-wc-shipping-local-pickup-plus.php:1408
+#: classes/class-wc-shipping-local-pickup-plus.php:1442
+#: classes/class-wc-shipping-local-pickup-plus.php:1476
+#: classes/class-wc-shipping-local-pickup-plus.php:1612
+#: classes/class-wc-shipping-local-pickup-plus.php:1622
+#: classes/class-wc-shipping-local-pickup-plus.php:1729
+msgid "Pickup Location"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1661
+msgid "No pickup location set."
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1746
+msgid "Pickup location changed to %s"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1946
+msgid "Address 2"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:1953
+msgid "Phone"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Local Pickup Plus"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woothemes.com/products/local-pickup-plus/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A shipping plugin for WooCommerce that allows the store operator to define "
+"local pickup locations, which the customer can then choose from when making "
+"a purchase."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooThemes / SkyVerge"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.woothemes.com"
+msgstr ""
+
+#: classes/class-wc-shipping-local-pickup-plus.php:186
+#. translators: Placeholder: %s - discount amount when using Local Pickup Plus
+#. shipping method
+msgctxt "Discount amount"
+msgid "save %s"
+msgstr ""
