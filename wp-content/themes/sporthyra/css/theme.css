@@ -8529,8 +8529,7 @@ input[type=radio] {
   float: left; }
 
 .woocommerce-checkout .entry-content #payment ul {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-top: 15px; }
 
 .woocommerce-checkout .entry-content #wc-stripe-cc-form {
   margin-left: -10px;
@@ -8724,20 +8723,15 @@ div.debug {
 .order_item ul.wc-item-meta p {
   display: inline; }
 
-li.wc_payment_method {
-  border: solid 1px #ddd;
-  padding: 15px;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  min-height: 50px; }
-
 li.wc_payment_method label, .woocommerce-checkout .entry-content #payment label {
   display: inline-block;
-  max-width: calc(100% - 45px) !important;
   margin: 0px;
   margin-bottom: 10px;
   position: relative;
-  top: 1px; }
+  top: 2px; }
+
+.li.wc_payment_method h3 {
+  margin-top: 20px; }
 
 .wc-terms-and-conditions span {
   margin-left: 10px;
@@ -8764,6 +8758,10 @@ li.wc_payment_method label, .woocommerce-checkout .entry-content #payment label 
 li.wc_payment_method img {
   max-height: 25px !important; }
 
+li.wc_payment_method .payment_box {
+  padding: 15px;
+  padding-top: 0px; }
+
 li.wc_payment_method .payment_box input[type=radio] {
   margin-left: 15px !important; }
 
@@ -8774,7 +8772,7 @@ li.wc_payment_method .payment_box input[type=radio] {
 li.wc_payment_method .payment_box label, .woocommerce-checkout .entry-content #payment .payment_box label {
   max-width: calc(100% - 60px) !important;
   margin-bottom: 5px;
-  top: 0px; }
+  top: 2px; }
 
 li.wc_payment_method .payment_box label:first-child, .woocommerce-checkout .entry-content #payment .payment_box label:first-child {
   margin-top: 10px; }
@@ -8841,3 +8839,55 @@ li.wc_payment_method .payment_box h3 {
 
 .pickup_location.select2-hidden-accessible {
   margin-top: 15px; }
+
+#payment li.wc_payment_method > label {
+  clear: both;
+  width: 100%;
+  margin-bottom: 0px !important; }
+
+#payment li.wc_payment_method > input[type=radio] {
+  display: none; }
+
+#payment li.wc_payment_method > .payment_box .part-payment-plans label {
+  position: relaltive;
+  top: -2px; }
+
+#payment li.wc_payment_method label i, #payment li.wc_payment_method label img {
+  float: right;
+  position: relative;
+  right: 6px; }
+
+#payment li.wc_payment_method label i {
+  position: relative;
+  top: 3px; }
+
+.wc_payment_method h3 {
+  margin-top: 20px !important; }
+
+.payment_active {
+  border: 1px solid #006eb6;
+  background: #f6fbff; }
+
+#payment li.wc_payment_method > label {
+  border: solid 1px #ddd !important;
+  padding: 15px;
+  padding-top: 20px !important;
+  min-height: 60px !important; }
+
+#payment li.wc_payment_method > label.payment_label_active {
+  border: none !important; }
+
+#payment li h3 {
+  font-size: 1em;
+  color: #4d4d4d;
+  font-weight: 700;
+  font-family: Arial,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif; }
+
+#payment li.wc_payment_method > label {
+  color: #797979;
+  font-family: nexa-regular;
+  font-size: 18px;
+  font-weight: 400; }
+
+ul.payment_methods > h3 {
+  display: none; }

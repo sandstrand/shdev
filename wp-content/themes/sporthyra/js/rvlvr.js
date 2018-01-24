@@ -245,7 +245,7 @@ for(var fonts=[{fontFamily:"Nexa-BlackItalic",url:wfpath+"3277C8_0"+suffix+"_0."
 ///// Payment fixes
 
 jQuery(document).ready(function ($) {
-	console.log('loaded');
+	//console.log('loaded');
 	function show_billing(){
 		$('.logged_in_hidden').show();
 		$('.saved_billing').hide();;
@@ -281,41 +281,67 @@ jQuery(document).ready(function ($) {
 		update_pnr( $value ); 
 	});
 
-
-
-	$(document).on('click', '.payment_method_sveawebpay_part_pay', function(){
-		show_billing_disclaimer();
-	});
-	$(document).on('click', '#payment_method_sveawebpay_part_pay', function(){
-		show_billing_disclaimer();
-	});
+	function toggle_payment_active(payment_label){
+		payment_label.hide();
 	
-	$(document).on('click', '.payment_method_sveawebpay_invoice', function(){
-		show_billing_disclaimer();
-	});
-	$(document).on('click', '#payment_method_sveawebpay_invoice', function(){
-		show_billing_disclaimer();
-	});
-
+	}
+	
 	$(document).on('click', '.payment_method_stripe', function(){
 		hide_billing_disclaimer();
+		$('.payment_active').removeClass('payment_active');
+		$('.payment_label_active').removeClass('payment_label_active');
+		$(this).addClass('payment_active');
+		$(this).children('label').addClass('payment_label_active');
 	});
-	$(document).on('click', '#payment_method_stripe', function(){
-		hide_billing_disclaimer();
-	});
-
 
 	$(document).on('click', '.payment_method_redlight_swish-ecommerce', function(){
 		hide_billing_disclaimer();
+		$('.payment_active').removeClass('payment_active');
+		$('.payment_label_active').removeClass('payment_label_active');
+		$(this).addClass('payment_active');
+		$(this).children('label').addClass('payment_label_active');
 	});	
-	$(document).on('click', '#payment_method_redlight_swish-ecommerce', function(){
-		hide_billing_disclaimer();
+
+	$(document).on('click', '.payment_method_sveawebpay_invoice', function(){
+		show_billing_disclaimer();
+		$('.payment_active').removeClass('payment_active');
+		$('.payment_label_active').removeClass('payment_label_active');
+		$(this).addClass('payment_active');
+		$(this).children('label').addClass('payment_label_active');
 	});
 
-	
+	$(document).on('click', '.payment_method_sveawebpay_part_pay', function(){
+		show_billing_disclaimer();
+		$('.payment_active').removeClass('payment_active');
+		$('.payment_label_active').removeClass('payment_label_active');
+		$(this).addClass('payment_active');
+		$(this).children('label').addClass('payment_label_active');	
+	});
+
 	$(document).on('click', '.update_billing', function(evt){
 		evt.preventDefault();
 		show_billing();
+	});
+
+});
+/// style payment boxes
+jQuery(document).ready(function ($) {
+	console.log('loaded payment');
+
+	function toggle_border($class){
+		console.log($class);
+		//$('#billing_personnr').val($value);
+	}	
+	
+	$(document).on('shown', '.payment_box', function(){
+		console.log('sometin');
+		$class = $( this ).class();
+		toggle_border( $class ); 
+	});
+	$(document).bind('display:none', '.payment_box', function(){
+		console.log('sometin');
+		$class = $( this ).class();
+		toggle_border( $class ); 
 	});
 
 });
