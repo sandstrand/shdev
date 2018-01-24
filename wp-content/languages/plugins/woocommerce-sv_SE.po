@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-01-23 03:28+0000\n"
+"PO-Revision-Date: 2018-01-23 21:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1602,7 +1602,7 @@ msgstr ""
 #: includes/admin/class-wc-admin-post-types.php:322
 #: includes/class-wc-checkout.php:202
 msgid "Order notes"
-msgstr ""
+msgstr "Meddelande"
 
 #. translators: 1: count 2: limit
 #: includes/admin/class-wc-admin-post-types.php:519
@@ -3018,7 +3018,7 @@ msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:438
 msgid "Customer notes about the order"
-msgstr ""
+msgstr "Kundanteckningar"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-downloads.php:67
 msgid "Grant access"
@@ -6119,12 +6119,6 @@ msgid ""
 "apologize for any inconvenience caused."
 msgstr ""
 
-#. translators: %s: product name
-#: includes/class-wc-cart.php:1089 includes/class-wc-frontend-scripts.php:539
-#: includes/wc-cart-functions.php:117 includes/wc-template-functions.php:1504
-msgid "View cart"
-msgstr "Visa varukorg"
-
 #: includes/class-wc-cart.php:1089
 msgid "You cannot add another \"%s\" to your cart."
 msgstr ""
@@ -6144,7 +6138,7 @@ msgstr ""
 
 #: includes/class-wc-checkout.php:203
 msgid "Notes about your order, e.g. special notes for delivery."
-msgstr ""
+msgstr "Leveransinstruktioner etc."
 
 #: includes/class-wc-checkout.php:219
 msgid "Create account password"
@@ -8012,6 +8006,12 @@ msgid "Showing the single result"
 msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
 msgstr[0] ""
 msgstr[1] ""
+
+#. translators: %s: product name
+#: includes/class-wc-cart.php:1089 includes/class-wc-frontend-scripts.php:539
+#: includes/wc-cart-functions.php:117 includes/wc-template-functions.php:1504
+msgid "View cart"
+msgstr "Visa varukorg"
 
 #. translators: use local order of street name and house number.
 #: includes/class-wc-countries.php:614
