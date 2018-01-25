@@ -2,23 +2,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sveawebpay\n"
 "POT-Creation-Date: 2017-08-28 16:49+0200\n"
-"PO-Revision-Date: 2017-08-28 16:49+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: sv_SE\n"
+"PO-Revision-Date: 2018-01-25 09:54+0000\n"
+"Last-Translator: sandstrand <nobody@localhost>\n"
+"Language-Team: Swedish\n"
+"Language: sv-SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Loco - https://localise.biz/\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
 "esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "X-Poedit-SearchPath-0: languages\n"
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
+"Report-Msgid-Bugs-To: "
 
 #: classes/wc-gateway-svea-card.php:50 classes/wc-gateway-svea-card.php:310
 msgid "SveaWebPay Card Payment"
@@ -208,16 +209,16 @@ msgid ""
 "refunded in Svea. <br />\n"
 "\t\t\t\t\tYour delivered orders will not be delivered in Svea and your "
 "cancelled orders will not be cancelled in Svea. <br />\n"
-"\t\t\t\t\t<strong>Don't touch this if you don't know what you're doing</"
-"strong>."
+"\t\t\t\t\t<strong>Don't touch this if you don't know what you're "
+"doing</strong>."
 msgstr ""
 "Inaktivera automatisk synkning av ordrar i WooCommerce till Svea. <br />\n"
 "\t\t\t\t\tOm du aktiverar denna inställning kommer dina återbetalda ordrar "
 "inte återbetalas i Svea. <br />\n"
 "\t\t\t\t\tDina levererade ordrar kommer inte att levereras i Svea och dina "
 "avbrutna ordrar kommer inte att makuleras i Svea. <br />\n"
-"\t\t\t\t\t<strong>Rör inte detta om du inte vet vad du håller på med</"
-"strong>."
+"\t\t\t\t\t<strong>Rör inte detta om du inte vet vad du håller på med</strong>"
+"."
 
 #: classes/wc-gateway-svea-card.php:562
 #: classes/wc-gateway-svea-direct-bank.php:574
@@ -1148,8 +1149,8 @@ msgid ""
 "refunded in Svea. <br />\n"
 "\t\t\t\t\t\tYour delivered orders will not be delivered in Svea and your "
 "cancelled orders will not be cancelled in Svea. <br />\n"
-"\t\t\t\t\t\t<strong>Don't touch this if you don't know what you're doing</"
-"strong>."
+"\t\t\t\t\t\t<strong>Don't touch this if you don't know what you're "
+"doing</strong>."
 msgstr ""
 "Inaktivera automatisk synkning av ordrar i WooCommerce till Svea. <br />\n"
 "\t\t\t\t\t\t\tOm du aktiverar denna inställning kommer dina återbetalda "
@@ -1296,7 +1297,7 @@ msgstr "månad"
 #: classes/wc-gateway-svea-part-pay.php:1000 partials/part-payment-plans.php:3
 #: sveawebpay-gateway.php:514 sveawebpay-gateway.php:594
 msgid "Part Payment Plans"
-msgstr "Delbetalningsplaner"
+msgstr "Välj en delbetalningsplan:"
 
 #: classes/wc-gateway-svea-part-pay.php:398
 msgid "There are no payment plans available for your order total."
@@ -1770,430 +1771,3 @@ msgstr "SveaWebPay transaktionsid: "
 #: sveawebpay-gateway.php:1090
 msgid "Svea Order Id"
 msgstr "Svea order id"
-
-#~ msgid "Please enter payment method."
-#~ msgstr "Välj betalningsmetod."
-
-#~ msgid "Transaction was rejected by the bank."
-#~ msgstr "Transaktionen medgavs inte av banken."
-
-#~ msgid ""
-#~ "Transaction cancelled. You can choose direct bank payment again to "
-#~ "process your order by selecting it below and continuing."
-#~ msgstr ""
-#~ "Transaktion avbruten. Du kan genomföra din order med direktbankbetalning "
-#~ "på nytt genom att välja det nedan och fortsätta."
-
-#~ msgid ""
-#~ "Transaction cancelled. You can choose card payment again to process your "
-#~ "order by selecting it below and continuing."
-#~ msgstr ""
-#~ "Transaktion avbruten. Du kan genomföra din order med kortbetalning på "
-#~ "nytt genom att välja det nedan och fortsätta."
-
-#~ msgid ""
-#~ "Svea WebPay Card doesn't support the currency %s. The supported "
-#~ "currencies are: %s"
-#~ msgstr ""
-#~ "Svea WebPay Kort stöder inte valutan %s. De valutor som stöds är: %s"
-
-#~ msgid ""
-#~ "Svea WebPay Card doesn't support the country %s. The supported countries "
-#~ "are: %s"
-#~ msgstr "Svea WebPay Kort stöder inte landet %s. De länder som stöds är: %s"
-
-#~ msgid "There are no order rows to credit"
-#~ msgstr "Det finns inga orderrader att kreditera"
-
-#~ msgid ""
-#~ "%s %s will be reserved on your bank account and then refunded after about "
-#~ "5 banking days. This is required to set up your subscription."
-#~ msgstr ""
-#~ "%s %s kommer att reserveras på ditt bankkonto och sedan betalas tillbaka "
-#~ "efter ungefär 5 bankdagar. Detta krävs för att sätta upp din "
-#~ "prenumeration."
-
-#~ msgid "Order is complete"
-#~ msgstr "Ordern är genomförd"
-
-#~ msgid "Direct bank payment method must me selected."
-#~ msgstr "Direktbanksbetalningsmetod måste vara vald."
-
-#~ msgid ""
-#~ "Disable automatic syncing of orders in WooCommerce to Svea. <br />\n"
-#~ "\t\t\t\t\t\t\tIf you enable this option, your refunded orders will not be "
-#~ "refunded in Svea. <br />\n"
-#~ "\t\t\t\t\t\t\tYour delivered orders will not be delivered in Svea and "
-#~ "your cancelled orders will not be cancelled in Svea. <br />\n"
-#~ "\t\t\t\t\t\t\t<strong>Don't touch this if you don't know what you're "
-#~ "doing</strong>."
-#~ msgstr ""
-#~ "Inaktivera automatisk synkning av ordrar i WooCommerce till Svea. <br />\n"
-#~ "\t\t\t\t\t\t\tOm du aktiverar denna inställning kommer dina återbetalda "
-#~ "ordrar inte att bli återbetalda i Svea. <br />\n"
-#~ "\t\t\t\t\t\t\tDina levererade ordrar kommer inte att levereras i Svea och "
-#~ "dina avbrutna ordrar kommer inte att annulleras/makuleras i Svea. <br />\n"
-#~ "\t\t\t\t\t\t\t<strong>Rör inte denna inställning om du inte vet vad du "
-#~ "håller på med</strong>."
-
-#~ msgid ""
-#~ "The shortcode is usable for the countries in whick you are using Svea "
-#~ "Invoice, independentenly of the payment method."
-#~ msgstr "Shortcoden "
-
-#~ msgid "Debug"
-#~ msgstr "Felsökning"
-
-#~ msgid "Enable debug mode for SveaWebPay Direct Bank Payment"
-#~ msgstr "Aktivera felsökningsläge för SveaWebPay Direktbanksbetalningar"
-
-#~ msgid "Enable debug mode for SveaWebPay Card Payment"
-#~ msgstr "Aktivera felsökning för SveaWebPay Kortbetalning"
-
-#~ msgid ""
-#~ "The PHP Module <strong>Soap</strong> is not enabled. Svea WebPay requires "
-#~ "this module to be enabled for it to function properly. Talk to your web "
-#~ "host and make sure it is enabled. "
-#~ msgstr "PHP-modulen <strong>Soap</strong> är inte "
-
-#~ msgid "%s - pay %s / %s"
-#~ msgstr "%s - betala %s / %s"
-
-#~ msgid "%s (%s per payment)"
-#~ msgstr "%s (%s per betalning)"
-
-#~ msgid "Shipping fee"
-#~ msgstr "Leveransavgift"
-
-#~ msgid "Pay with creditcard through SveaWebPay"
-#~ msgstr "Betala med kreditkort genom SveaWebPay "
-
-#~ msgid "Pay with direct bank payments through SveaWebPay"
-#~ msgstr "Betala med direktbanksbetalningar genom SveaWebPay"
-
-#~ msgid "Pay with invoice through SveaWebPay"
-#~ msgstr "Betala med faktura genom SveaWebPay"
-
-#~ msgid "Pay with part payments through SveaWebPay"
-#~ msgstr "Delbetala genom SveaWebPay"
-
-#~ msgid "Order needs manual review"
-#~ msgstr "Ordern behöver manuell kontroll"
-
-#~ msgid "Organisational number"
-#~ msgstr "Organisationsnummer"
-
-#~ msgid "Deliver"
-#~ msgstr "Leverera order"
-
-#~ msgid "Deliver in Svea"
-#~ msgstr "Leverera i Svea"
-
-#~ msgid "Invoice fee for Denmark"
-#~ msgstr "Fakturaavgift för Danmark"
-
-#~ msgid "Invoice fee for Germany"
-#~ msgstr "Fakturaavgift för Tyskland"
-
-#~ msgid "Invoice fee for Finland"
-#~ msgstr "Fakturaavgift för Finland"
-
-#~ msgid "Invoice fee for Netherlands"
-#~ msgstr "Fakturaavgift för Nederländerna"
-
-#~ msgid "Invoice fee for Norway"
-#~ msgstr "Fakturaavgift för Norge"
-
-#~ msgid "Invoice fee for Sweden"
-#~ msgstr "Fakturaavgift för Sverige"
-
-#~ msgid "%s / invoice sent"
-#~ msgstr "%s / skickad faktura"
-
-#~ msgid "Testmode Sweden"
-#~ msgstr "Testläge Sverige"
-
-#~ msgid "Testmode Germany"
-#~ msgstr "Testläge Tyskland"
-
-#~ msgid "Enable/disable testmode in Germany"
-#~ msgstr "Aktivera/inaktivera testläge i Tyskland"
-
-#~ msgid "Enable/disable testmode in Finland"
-#~ msgstr "Aktivera/inaktivera testläge i Finland"
-
-#~ msgid "Enable/disable testmode in Netherlands"
-#~ msgstr "Aktivera/inaktivera testläge i Nederländerna"
-
-#~ msgid "Client number production Finland"
-#~ msgstr "Kundnummer produktionsläge Finland"
-
-#~ msgid "Geoip"
-#~ msgstr "Geoip"
-
-#~ msgid "Enable Geoip on SveaWebPay Card Payment to locate customer country"
-#~ msgstr ""
-#~ "Aktivera Geoip för SveaWebPay Kort Betalning för att lokalisera kundens "
-#~ "land"
-
-#~ msgid ""
-#~ "Thank you for your ordering with SveaWebPay, we are now redirecting you."
-#~ msgstr "Tack för att du beställer med SveaWebPay, du blir nu omdirigerad."
-
-#~ msgid "Thank you for paying with SveaWebPay Card Payment"
-#~ msgstr "Tack för att du betalar med SveaWebPay Kort Betalning"
-
-#~ msgid "Merchant id production"
-#~ msgstr "Butiks-id produktionsläge"
-
-#~ msgid "Your SveaWebPay production merchant id"
-#~ msgstr "Ditt butiks-id för SveaWebPay i produktionsläge"
-
-#~ msgid "Secret word production"
-#~ msgstr "Hemligt ord produktionsläge"
-
-#~ msgid "Your SveaWebPay production secret word"
-#~ msgstr "Ditt hemliga ord för SveaWebPay i produktionsläge"
-
-#~ msgid "Merchant id test mode"
-#~ msgstr "Butiks-id testläge"
-
-#~ msgid "Your SveaWebPay test mode merchant id"
-#~ msgstr "Ditt butiks-id för SveaWebPay i testläge"
-
-#~ msgid "Secret word test mode"
-#~ msgstr "Hemligt ord testläge"
-
-#~ msgid "Your SveaWebPay test mode secret word"
-#~ msgstr "Ditt hemliga ord för SveaWebPay i testläge"
-
-#~ msgid ""
-#~ "Enable Geoip on SveaWebPay Direct Bank Payment to locate customer country"
-#~ msgstr ""
-#~ "Aktivera Geoip för SveaWebPay Direkt Bank Betalning för att lokalisera "
-#~ "kundens land"
-
-#~ msgid ""
-#~ "Thank you for your ordering with Sveawebpay, we are now redirecting you."
-#~ msgstr "Tack för att du använder SveaWebPay, du blir nu omdirigerad"
-
-#~ msgid "Username production Denmark"
-#~ msgstr "Användarnamn produktionsläge Danmark"
-
-#~ msgid "Production username for invoice payments in Denmark"
-#~ msgstr "Användarnamn produktionsläge för fakturabetalningar i Danmark"
-
-#~ msgid "Password production Denmark"
-#~ msgstr "Lösenord produktionsläge Danmark"
-
-#~ msgid "Client number production Denmark"
-#~ msgstr "Kundnummer produktionsläge Danmark"
-
-#~ msgid "Production client number for invoice payments in Denmark"
-#~ msgstr "Kundnummer produktionsläge för fakturabetalningar i Danmark"
-
-#~ msgid "Test mode password for invoice payments in Denmark"
-#~ msgstr "Lösenord testläge för fakturabetalningar i Danmark"
-
-#~ msgid "Username production Germany"
-#~ msgstr "Användarnamn produktionsläge Tyskland"
-
-#~ msgid "Production username for invoice payments in Germany"
-#~ msgstr "Användarnamn produktionsläge för fakturabetalningar i Tyskland"
-
-#~ msgid "Password production Germany"
-#~ msgstr "Lösenord produktionsläge Tyskland"
-
-#~ msgid "Client number production Germany"
-#~ msgstr "Kundnummer produktionsläge Tyskland"
-
-#~ msgid "Client number for production mode invoice payments in Germany"
-#~ msgstr "Kundnummer produktionsläge för fakturabetalningar i Tyskland"
-
-#~ msgid "Test mode password for invoice payments in Germany"
-#~ msgstr "Lösenord testläge för fakturabetalningar i Tyskland"
-
-#~ msgid "Username production Finland"
-#~ msgstr "Användarnamn produktionsläge Finland"
-
-#~ msgid "Production username for invoice payments in Finland"
-#~ msgstr "Användarnamn produktionsläge för fakturabetalningar i Finland"
-
-#~ msgid "Password production Finland"
-#~ msgstr "Lösenord produktionsläge Finland"
-
-#~ msgid "Production client number for invoice payments in Finland"
-#~ msgstr "Kundnummer produktionsläge för fakturabetalningar i Finland"
-
-#~ msgid "Test mode password for invoice payments in Finland"
-#~ msgstr "Lösenord testläge för fakturabetalningar i Finland"
-
-#~ msgid "Username production Netherlands"
-#~ msgstr "Användarnamn produktionsläge Nederländerna"
-
-#~ msgid "Production username for invoice payments in Netherlands"
-#~ msgstr "Användarnamn produktionsläge för fakturabetalningar i Nederländerna"
-
-#~ msgid "Password production Netherlands"
-#~ msgstr "Lösenord produktionsläge Nederländerna"
-
-#~ msgid "Client number production Netherlands"
-#~ msgstr "Kundnummer produktionsläge Nederländerna"
-
-#~ msgid "Production client number for invoice payments in Netherlands"
-#~ msgstr "Kundnummer för produktionsläge i Nederländerna"
-
-#~ msgid "Test mode password for invoice payments in Netherlands"
-#~ msgstr "Lösenord testläge för fakturabetalningar i Nederländerna"
-
-#~ msgid "Enable/disable testmode in Norway"
-#~ msgstr "Aktivera/inaktivera testläge i Norge"
-
-#~ msgid "Username production Norway"
-#~ msgstr "Användarnamn produktionsläge Norge"
-
-#~ msgid "Production username for invoice payments in Norway"
-#~ msgstr "Användarnamn produktionsläge för fakturabetalningar i Norge"
-
-#~ msgid "Password production Norway"
-#~ msgstr "Lösenord produktionsläge Norge"
-
-#~ msgid "Client number production Norway"
-#~ msgstr "Kundnummer produktionsläge Norge"
-
-#~ msgid "Production client number for invoice payments in Norway"
-#~ msgstr "Kundnummer produktionsläge för fakturabetalningar i Norge"
-
-#~ msgid "Test mode password for invoice payments in Norway"
-#~ msgstr "Lösenord testläge för fakturabetalningar i Norge"
-
-#~ msgid "Enable/disable testmode in Sweden"
-#~ msgstr "Aktivera/inaktivera testläge i Sverige"
-
-#~ msgid "Username production Sweden"
-#~ msgstr "Användarnamn produktionsläge Sverige"
-
-#~ msgid "Production username for invoice payments in Sweden"
-#~ msgstr "Användarnamn produktionsläge för fakturabetalningar i Sverige"
-
-#~ msgid "Password production Sweden"
-#~ msgstr "Lösenord produktionsläge Sverige"
-
-#~ msgid "Client number production Sweden"
-#~ msgstr "Kundnummer produktionsläge Sverige"
-
-#~ msgid "Production client number for invoice payments in Sweden"
-#~ msgstr "Kundnummer produktionsläge för fakturabetalningar i Sverige"
-
-#~ msgid "Test mode password for invoice payments in Sweden"
-#~ msgstr "Lösenord testläge för fakturabetalningar i Sverige"
-
-#~ msgid "Production username for part payments in Denmark"
-#~ msgstr "Användarnamn produktionsläge för delbetalningar i Danmark"
-
-#~ msgid "Production client number for part payments in Denmark"
-#~ msgstr "Kundnummer produktionsläge för delbetalningar i Danmark"
-
-#~ msgid "Test mode password for part payments in Denmark"
-#~ msgstr "Lösenord testläge för delbetalningar i Danmark"
-
-#~ msgid "Production username for part payments in Germany"
-#~ msgstr "Användarnamn produktionsläge för delbetalningar i Tyskland"
-
-#~ msgid "Client number for production mode part payments in Germany"
-#~ msgstr "Kundnummer produktionsläge för delbetalningar i Tyskland"
-
-#~ msgid "Test mode password for part payments in Germany"
-#~ msgstr "Lösenord testläge för delbetalningar i Tyskland"
-
-#~ msgid "Production username for part payments in Finland"
-#~ msgstr "Användarnamn produktionsläge för delbetalningar i Finland"
-
-#~ msgid "Production client number for part payments in Finland"
-#~ msgstr "Kundnummer produktionsläge för delbetalningar i Finland"
-
-#~ msgid "Test mode password for part payments in Finland"
-#~ msgstr "Lösenord testläge för delbetalningar i Finland"
-
-#~ msgid "Production username for part payments in Netherlands"
-#~ msgstr "Användarnamn produktionsläge för delbetalningar i Nederländerna"
-
-#~ msgid "Production client number for part payments in Netherlands"
-#~ msgstr "Kundnummer produktionsläge för delbetalningar i Nederländerna"
-
-#~ msgid "Test mode password for part payments in Netherlands"
-#~ msgstr "Lösenord testläge för delbetalningar i Nederländerna"
-
-#~ msgid "Production username for part payments in Norway"
-#~ msgstr "Användarnamn produktionsläge för delbetalningar i Norge"
-
-#~ msgid "Production client number for part payments in Norway"
-#~ msgstr "Kundnummer produktionsläge för delbetalningar i Norge"
-
-#~ msgid "Test mode password for part payments in Norway"
-#~ msgstr "Lösenord testläge för delbetalningar i Norge"
-
-#~ msgid "Production client number for part payments in Sweden"
-#~ msgstr "Kundnummer produktionsläge för delbetalningar i Sverige"
-
-#~ msgid "Username test mode Sweden"
-#~ msgstr "Användarnamn testläge Sverige"
-
-#~ msgid "Test mode password for part payments in Sweden"
-#~ msgstr "Lösenord testläge för delbetalningar i Sverige"
-
-#~ msgid "Thank you for paying with SveaWebPay Part Payment"
-#~ msgstr "Tack för att du betalar med SveaWebPay Kort Betalning"
-
-#~ msgid "<strong>Billing country</strong> is not set."
-#~ msgstr "<strong>Betalningsland</strong> är inte valt."
-
-#~ msgid ""
-#~ "Those methods are not available whilst using the direct bank payment "
-#~ "method."
-#~ msgstr ""
-#~ "De betalningsmetoderna är inte tillgängliga då man använder direkt bank "
-#~ "betalningsmetoden."
-
-#~ msgid "<strong>Payment method</strong> has not been chosen."
-#~ msgstr "<strong>Betalningsmetod</strong> har inte valts."
-
-#~ msgid "Text for get address button Denmark"
-#~ msgstr "Text för hämta adress knapp i Danmark"
-
-#~ msgid "Text for get address button Norway"
-#~ msgstr "Text för hämta adress knapp i Norge"
-
-#~ msgid "Get address button Sweden"
-#~ msgstr "Hämta adress knapp Sverige"
-
-#~ msgid "Text for get address button Sweden"
-#~ msgstr "Text för hämta adress knapp i Sverige"
-
-#~ msgid "An <strong>Organisational number</strong> can only contain digits."
-#~ msgstr ""
-#~ "Ett <strong>Organisationsnummer</strong> kan bara innehålla siffror."
-
-#~ msgid "SveaWebPay Card"
-#~ msgstr "SveaWebPay Kort"
-
-#~ msgid "SveaWebPay Invoice"
-#~ msgstr "SveaWebPay Faktura"
-
-#~ msgid "Enable/Disable test mode in Denmark"
-#~ msgstr "Aktivera/Inaktivera testläge i Danmark"
-
-#~ msgid "Enable/Disable test mode in Germany"
-#~ msgstr "Aktivera/inaktivera testläge i Tyskland"
-
-#~ msgid "Enable/Disable test mode in Finland"
-#~ msgstr "Aktivera/Inaktivera testläge i Finland"
-
-#~ msgid "SveaWebPay invoice payment"
-#~ msgstr "SveaWebPay faktura betalning"
-
-#~ msgid "Process Part Payments through SveaWebPay."
-#~ msgstr "Genomför Delbetalningar med SveaWebPay"
-
-#~ msgid "Thank you for paying with Svea Payment plan."
-#~ msgstr "Tack för att du delbetalar genom SveaWebPay."
