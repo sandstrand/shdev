@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 						<div class="create-account">
 
-							<p class="col-xs-12"><?php _e( 'Ett konto kommer att skapas åt dig. Om du är en återvändande kund så loggar du in på toppen avden här sidan', 'woocommerce' ); ?></p>
+							<p class="col-xs-12"><?php _e( 'Ett konto kommer att skapas åt dig. Om du är en återvändande kund så loggar du in på toppen av den här sidan', 'woocommerce' ); ?></p>
 
 							<?php foreach ( $checkout->checkout_fields['account'] as $key => $field ) : ?>
 

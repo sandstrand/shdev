@@ -1627,7 +1627,7 @@ function custom_override_checkout_fields( $fields ) {
 	//$fields['billing']['billing_city']['class'] = array('col-xs-12 col-sm-6');
 	//$fields['billing']['billing_email']['class'] = array('col-xs-12 col-sm-6');
 	//$fields['billing']['billing_phone']['class'] = array('col-xs-12 col-sm-6');
-	$fields['billing']['billing_personnr'] = array( 'label' => __('Personnummer', 'woocommerce'), 'placeholder'   => __('yyyymmddnnnn', 'placeholder', 'woocommerce'), 'required'  => true,	'clear'=> true ,'class' => array('col-xs-12 col-sm-6'));
+	$fields['billing']['billing_personnr'] = array( 'label' => __('Personnummer', 'woocommerce'), 'placeholder'   => __('yymmddnnnn', 'placeholder', 'woocommerce'), 'required'  => true,	'clear'=> true ,'class' => array('col-xs-12 col-sm-6'));
 	
 	$fields['account']['account_username']['class'] = array('col-xs-12 col-sm-6');		
 	$fields['account']['account_password']['class'] = array('pull-right col-xs-12 col-sm-6');	 
@@ -1872,7 +1872,7 @@ function order_address_fields($fields) {
 	$fields['personnr'] = array (
 			'label' => 'Personnummer',
 			'required' => false,
-			'placeholder' => 'yyyymmddnnnn',
+			'placeholder' => 'yymmddnnnn',
 			'class' =>			
 				array (
 				0 => 'col-sm-6 form-row-first',
