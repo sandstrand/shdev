@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sveawebpay\n"
 "POT-Creation-Date: 2017-08-28 16:49+0200\n"
-"PO-Revision-Date: 2018-01-25 09:54+0000\n"
+"PO-Revision-Date: 2018-01-25 10:28+0000\n"
 "Last-Translator: sandstrand <nobody@localhost>\n"
 "Language-Team: Swedish\n"
 "Language: sv-SE\n"
@@ -539,7 +539,7 @@ msgstr "<strong>Organisationsnumret</strong> är inte korrekt."
 #: classes/wc-gateway-svea-invoice.php:422
 #: classes/wc-gateway-svea-part-pay.php:886
 msgid "The <strong>Personal number</strong> is not valid."
-msgstr "<strong>Personnumret</strong> är inte korrekt."
+msgstr "<strong>Personnumret</strong> är inte korrekt. Ange som yymmddnnnn"
 
 #: classes/wc-gateway-svea-invoice.php:426
 #: classes/wc-gateway-svea-part-pay.php:889
@@ -1439,12 +1439,14 @@ msgstr "Det finns inga möjliga betalningsplaner för detta land eller belopp."
 
 #: classes/wc-gateway-svea-part-pay.php:900
 msgid "A <strong>Personal number</strong> can only contain digits."
-msgstr "Ett <strong>Personnummer</strong> kan bara innehålla siffror."
+msgstr ""
+"Ett <strong>Personnummer</strong> kan bara innehålla siffror. Ange som "
+"yymmddnnnn"
 
 #: classes/wc-gateway-svea-part-pay.php:903
 #: classes/wc-gateway-svea-part-pay.php:913
 msgid "The <strong>Personal number</strong> entered is not correct."
-msgstr "<strong>Personnumret<strong> är inte korrekt."
+msgstr "<strong>Personnumret<strong> är inte korrekt. Ange som yymmddnnnn"
 
 #: classes/wc-gateway-svea-part-pay.php:1026
 msgid "Process part payments through SveaWebPay."
