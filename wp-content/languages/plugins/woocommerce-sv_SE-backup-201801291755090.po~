@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-01-29 17:55+0000\n"
+"PO-Revision-Date: 2018-01-29 17:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Language: sv-SE\n"
 "Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-29 17:43+0000\n"
+"POT-Creation-Date: 2018-01-17 09:55+0000\n"
 "Last-Translator: sandstrand <nobody@localhost>\n"
 "Language-Team: Swedish"
 
@@ -6891,6 +6891,11 @@ msgstr ""
 msgid "Card code"
 msgstr ""
 
+#: includes/gateways/class-wc-payment-gateway-cc.php:60
+#: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:306
+msgid "Card number"
+msgstr "Kortnummer"
+
 #: includes/gateways/cod/class-wc-gateway-cod.php:70
 msgid "Enable cash on delivery"
 msgstr ""
@@ -7984,6 +7989,98 @@ msgid "Showing the single result"
 msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
 msgstr[0] ""
 msgstr[1] ""
+
+#: includes/class-wc-checkout.php:219
+msgid "Create account password"
+msgstr "Välj ett lösenord"
+
+#: includes/admin/class-wc-admin-post-types.php:322
+#: includes/class-wc-checkout.php:202
+msgid "Order notes"
+msgstr "Meddelande"
+
+#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:438
+msgid "Customer notes about the order"
+msgstr "Kundanteckningar"
+
+#: includes/class-wc-checkout.php:203
+msgid "Notes about your order, e.g. special notes for delivery."
+msgstr "Leveransinstruktioner etc."
+
+#. translators: %s: product name
+#: includes/class-wc-cart.php:1089 includes/class-wc-frontend-scripts.php:539
+#: includes/wc-cart-functions.php:117 includes/wc-template-functions.php:1504
+msgid "View cart"
+msgstr "Visa varukorg"
+
+#. translators: use local order of street name and house number.
+#: includes/class-wc-countries.php:614
+msgid "House number and street name"
+msgstr "Gatuadress"
+
+#: includes/abstracts/abstract-wc-payment-gateway.php:456
+msgid "Save to account"
+msgstr "Spara detta kort"
+
+#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:336
+#: includes/class-wc-order.php:1807 templates/checkout/order-receipt.php:39
+#: templates/checkout/thankyou.php:69
+msgid "Payment method:"
+msgstr "Betalsätt:"
+
+#. translators: 1: credit card type 2: last 4 digits 3: expiry month 4: expiry
+#. year
+#: includes/payment-tokens/class-wc-payment-token-cc.php:45
+msgid "%1$s ending in %2$s (expires %3$s/%4$s)"
+msgstr "%1$s som slutar med %2$s (gäller till %3$s/%4$s)"
+
+#: templates/cart/proceed-to-checkout-button.php:27
+msgid "Proceed to checkout"
+msgstr "Till kassan"
+
+#: templates/checkout/terms.php:26
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" target=\"_blank\" "
+"class=\"woocommerce-terms-and-conditions-link\">terms &amp; conditions</a>"
+msgstr ""
+"Jag har läst och godkänner <a href=\"%s\" target=\"_blank\" "
+"class=\"woocommerce-terms-and-conditions-link\">Villkoren</a>"
+
+#. translators: 1: credit card type 2: last 4 digits
+#: templates/myaccount/payment-methods.php:52
+msgid "%1$s ending in %2$s"
+msgstr "%1$s som slutar med %2$s"
+
+#: includes/class-wc-countries.php:612
+msgid "Street address"
+msgstr "Adress"
+
+#: includes/class-wc-countries.php:621
+msgid "Apartment, suite, unit etc. (optional)"
+msgstr "Våning eller liknande"
+
+#: includes/wc-account-functions.php:349
+msgid "Make default"
+msgstr "Gör till standard"
+
+#: templates/cart/cart.php:142
+msgid "Update cart"
+msgstr "Uppdatera varukorg"
+
+#: templates/myaccount/form-edit-address.php:52
+msgid "Save address"
+msgstr "Uppdatera"
+
+#: includes/admin/settings/class-wc-settings-accounts.php:155
+#: includes/class-wc-query.php:121 includes/wc-account-functions.php:104
+msgid "Payment methods"
+msgstr "Sparade kort"
+
+#: includes/class-wc-query.php:115
+#: includes/gateways/bacs/class-wc-gateway-bacs.php:123
+#: includes/wc-account-functions.php:105
+msgid "Account details"
+msgstr "Ditt konto"
 
 #: i18n/continents.php:19
 msgid "Africa"
@@ -12694,10 +12791,6 @@ msgstr "Totalt:"
 msgid "Use a new payment method"
 msgstr "Använd ett nytt kort"
 
-#: includes/abstracts/abstract-wc-payment-gateway.php:456
-msgid "Save to account"
-msgstr "Spara detta kort"
-
 #: includes/abstracts/abstract-wc-product.php:1183
 msgid ""
 "The downloadable file %s cannot be used as it does not exist on the server."
@@ -14261,11 +14354,6 @@ msgstr "Betalning"
 msgid "Ship to"
 msgstr "Leverans"
 
-#: includes/admin/class-wc-admin-post-types.php:322
-#: includes/class-wc-checkout.php:202
-msgid "Order notes"
-msgstr "Meddelande"
-
 #: includes/admin/class-wc-admin-post-types.php:324
 #: includes/admin/meta-boxes/views/html-order-items.php:33
 #: includes/admin/meta-boxes/views/html-order-items.php:174
@@ -15434,12 +15522,6 @@ msgstr "Hämta kundens faktureringsadress"
 msgid "No billing address set."
 msgstr "Faktureringsadress saknas."
 
-#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:336
-#: includes/class-wc-order.php:1807 templates/checkout/order-receipt.php:39
-#: templates/checkout/thankyou.php:69
-msgid "Payment method:"
-msgstr "Betalsätt:"
-
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:338
 #: includes/admin/meta-boxes/views/html-order-shipping.php:24
 #: includes/admin/settings/class-wc-settings-emails.php:98
@@ -15479,10 +15561,6 @@ msgstr "Hämta kundens leveransadress"
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:385
 msgid "No shipping address set."
 msgstr "Leveransadress saknas."
-
-#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:438
-msgid "Customer notes about the order"
-msgstr "Kundanteckningar"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-downloads.php:54
 #: includes/class-wc-ajax.php:727
@@ -16645,11 +16723,6 @@ msgstr ""
 #: includes/class-wc-query.php:118 includes/wc-account-functions.php:103
 msgid "Addresses"
 msgstr "Visa mina adresser"
-
-#: includes/admin/settings/class-wc-settings-accounts.php:155
-#: includes/class-wc-query.php:121 includes/wc-account-functions.php:104
-msgid "Payment methods"
-msgstr "Sparade kort"
 
 #: includes/admin/settings/class-wc-settings-accounts.php:173
 #: includes/wc-account-functions.php:106
@@ -21159,12 +21232,6 @@ msgid "An item which is no longer available was removed from your cart."
 msgstr ""
 "En artikel som inte längre är tillgänglig har tagits bort från din varukorg."
 
-#. translators: %s: product name
-#: includes/class-wc-cart.php:1089 includes/class-wc-frontend-scripts.php:539
-#: includes/wc-cart-functions.php:117 includes/wc-template-functions.php:1504
-msgid "View cart"
-msgstr "Visa varukorg"
-
 #: includes/class-wc-cart.php:1094
 msgid "Sorry, this product cannot be purchased."
 msgstr "Tyvärr, den här produkten kan inte köpas."
@@ -21181,17 +21248,9 @@ msgstr ""
 msgid "View Cart"
 msgstr "Visa varukorg"
 
-#: includes/class-wc-checkout.php:203
-msgid "Notes about your order, e.g. special notes for delivery."
-msgstr "Leveransinstruktioner etc."
-
 #: includes/class-wc-checkout.php:210
 msgid "Account username"
 msgstr "Kontots användarnamn"
-
-#: includes/class-wc-checkout.php:219
-msgid "Create account password"
-msgstr "Välj ett lösenord"
 
 #: includes/class-wc-checkout.php:221 templates/auth/form-login.php:39
 #: templates/global/form-login.php:39 templates/myaccount/form-login.php:48
@@ -21276,19 +21335,6 @@ msgstr "(exkl. moms)"
 #: includes/class-wc-countries.php:400
 msgid "(ex. tax)"
 msgstr "(exkl. moms)"
-
-#: includes/class-wc-countries.php:612
-msgid "Street address"
-msgstr "Adress"
-
-#. translators: use local order of street name and house number.
-#: includes/class-wc-countries.php:614
-msgid "House number and street name"
-msgstr "Gatuadress"
-
-#: includes/class-wc-countries.php:621
-msgid "Apartment, suite, unit etc. (optional)"
-msgstr "Våning eller liknande"
 
 #: includes/class-wc-countries.php:628
 msgid "Town / City"
@@ -21862,12 +21908,6 @@ msgstr "Beställningar (sid. %d)"
 msgid "Order #%s"
 msgstr "Order #%s"
 
-#: includes/class-wc-query.php:115
-#: includes/gateways/bacs/class-wc-gateway-bacs.php:123
-#: includes/wc-account-functions.php:105
-msgid "Account details"
-msgstr "Ditt konto"
-
 #: includes/class-wc-shipping-zone.php:141
 msgid "%s and %d other region"
 msgid_plural "%s and %d other regions"
@@ -22275,18 +22315,13 @@ msgstr ""
 msgid "CVC"
 msgstr "CVC"
 
-#: includes/gateways/class-wc-payment-gateway-cc.php:60
-#: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:306
-msgid "Card number"
-msgstr "Kortnummer"
-
 #: includes/gateways/class-wc-payment-gateway-cc.php:64
 msgid "Expiry (MM/YY)"
 msgstr "Gäller till (MM/YY)"
 
 #: includes/gateways/class-wc-payment-gateway-cc.php:65
 msgid "MM / YY"
-msgstr "MM / ÅÅ"
+msgstr "MM / YY"
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:53
 msgid "Have your customers pay with cash (or by other means) upon delivery."
@@ -22711,12 +22746,6 @@ msgstr "Återbetalning nekades."
 msgid "Download %d"
 msgstr "Hämta %d"
 
-#. translators: 1: credit card type 2: last 4 digits 3: expiry month 4: expiry
-#. year
-#: includes/payment-tokens/class-wc-payment-token-cc.php:45
-msgid "%1$s ending in %2$s (expires %3$s/%4$s)"
-msgstr "%1$s som slutar med %2$s (gäller till %3$s/%4$s)"
-
 #: includes/payment-tokens/class-wc-payment-token-echeck.php:41
 #: includes/wc-account-functions.php:243 includes/wc-account-functions.php:397
 msgid "eCheck"
@@ -22960,10 +22989,6 @@ msgstr "Den e-postadress du angett är ogiltig."
 #: includes/wc-account-functions.php:100
 msgid "Dashboard"
 msgstr "Kontrollpanel"
-
-#: includes/wc-account-functions.php:349
-msgid "Make default"
-msgstr "Gör till standard"
 
 #: includes/wc-attribute-functions.php:196
 msgid "Select"
@@ -23962,10 +23987,6 @@ msgstr "Ta bort den här artikeln"
 msgid "Coupon:"
 msgstr "Rabattkod:"
 
-#: templates/cart/cart.php:142
-msgid "Update cart"
-msgstr "Uppdatera varukorg"
-
 #: templates/cart/cross-sells.php:27
 msgid "You may be interested in&hellip;"
 msgstr "Du kanske är intresserad av&hellip;"
@@ -23973,10 +23994,6 @@ msgstr "Du kanske är intresserad av&hellip;"
 #: templates/cart/mini-cart.php:80
 msgid "No products in the cart."
 msgstr "Du har inga produkter i varukorgen."
-
-#: templates/cart/proceed-to-checkout-button.php:27
-msgid "Proceed to checkout"
-msgstr "Till kassan"
 
 #: templates/cart/shipping-calculator.php:98 templates/checkout/payment.php:43
 msgid "Update totals"
@@ -24072,14 +24089,6 @@ msgstr ""
 "avstängt, så måste du klicka på <em>Uppdatera summa</em> innan du skickar "
 "ordern. Om du inte uppdaterar så riskerar du att betala mer än det som visas "
 "här ovanför."
-
-#: templates/checkout/terms.php:26
-msgid ""
-"I&rsquo;ve read and accept the <a href=\"%s\" target=\"_blank\" "
-"class=\"woocommerce-terms-and-conditions-link\">terms &amp; conditions</a>"
-msgstr ""
-"Jag har läst och godkänner <a href=\"%s\" target=\"_blank\" "
-"class=\"woocommerce-terms-and-conditions-link\">Villkoren</a>"
 
 #: templates/checkout/thankyou.php:30
 msgid ""
@@ -24258,10 +24267,6 @@ msgstr "Rea!"
 msgid "No downloads available yet."
 msgstr "Inga nedladdningar tillgängliga ännu."
 
-#: templates/myaccount/form-edit-address.php:52
-msgid "Save address"
-msgstr "Uppdatera"
-
 #: templates/myaccount/form-login.php:75 templates/myaccount/form-login.php:108
 msgid "Register"
 msgstr "Registrera"
@@ -24322,11 +24327,6 @@ msgstr "Föregående"
 #: templates/myaccount/orders.php:103
 msgid "No order has been made yet."
 msgstr "Ingen beställning har gjorts ännu."
-
-#. translators: 1: credit card type 2: last 4 digits
-#: templates/myaccount/payment-methods.php:52
-msgid "%1$s ending in %2$s"
-msgstr "%1$s som slutar med %2$s"
 
 #: templates/myaccount/payment-methods.php:73
 msgid "No saved methods found."
