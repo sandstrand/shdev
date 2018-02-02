@@ -1450,7 +1450,7 @@ function rvlvr_checkout_delivery_date( $checkout ) {
 add_action('woocommerce_checkout_process', 'rvlvr_checkout_validate');
 
 function rvlvr_checkout_validate() {
-    
+	 
 	///// Delivery dates
 	// Rent in cart
 	if ( rvlvr_rent_in_cart() ){	
@@ -1519,12 +1519,15 @@ function rvlvr_order_meta( $order_id ) {
         update_post_meta( $order_id, 'order_delivery_note', $_POST['order_delivery_note']  );
     }
 	
-	if ( ! empty( $_POST['pickup_location'][1] ) ) {
+	if($_POST['pickup_location'][0]){ update_post_meta( $order_id, 'pickup_location_0', $_POST['pickup_location'][0]  ); }    
+	if($_POST['pickup_location'][1]){ update_post_meta( $order_id, 'pickup_location_1', $_POST['pickup_location'][1]  ); }  
+
+	/*	if ( ! empty( $_POST['pickup_location'][1] ) ) {
         update_post_meta( $order_id, 'pickup_location_1', $_POST['pickup_location'][0]  );
     }
 	if ( ! empty( $_POST['pickup_location'][2] ) ) {
         update_post_meta( $order_id, 'pickup_location_2', $_POST['pickup_location'][1]  );
-    }
+    } */
 }
 
 // Add order meta to order page
@@ -1559,8 +1562,8 @@ function rvlvr_add_recipients($recipient, $order){
 	if ( ! $order instanceof WC_Order ) {
 		return $recipient; 
 	}
-	$locations[] = get_post_meta($order->id, 'pickup_location_1', true);
-	$locations[] = get_post_meta($order->id, 'pickup_location_2', true);
+	$locations[] = get_post_meta($order->get_id(), 'pickup_location_0', true);
+	$locations[] = get_post_meta($order->get_id(), 'pickup_location_1', true);
 	
 	foreach ($locations as $id){
 	// uncomment for store emails
