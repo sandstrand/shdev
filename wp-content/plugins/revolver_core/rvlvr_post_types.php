@@ -687,15 +687,17 @@ class rvlvr_stores_widget extends WP_Widget {
 			echo "<li><a class='secondary' href='" . get_permalink($store->ID) . "' >" . $store->post_title . "</a></li>";
 		}
 		echo "</ul></div>";
-		echo "<div>";
-		echo "<b>" . __('Agent stores', 'rvlvr' ) . "</b>";
-		echo "<ul>";
-		foreach(rvlvr_get_stores('agent') as $store){
-			echo "<li><a class='secondary' href='" . get_permalink($store->ID) . "' >" . $store->post_title . "</a></li>";
+		if(count(rvlvr_get_stores('agent'))>0){
+			echo "<div>";
+			echo "<b>" . __('Agent stores', 'rvlvr' ) . "</b>";
+			echo "<ul>";
+			foreach(rvlvr_get_stores('agent') as $store){
+				echo "<li><a class='secondary' href='" . get_permalink($store->ID) . "' >" . $store->post_title . "</a></li>";
+			}
+			echo "</ul>";
+			echo "</div>";
+			echo $args['after_widget'];
 		}
-		echo "</ul>";
-		echo "</div>";
-		echo $args['after_widget'];
 		
     }
 
