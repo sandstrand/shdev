@@ -2265,3 +2265,17 @@ ul.payment_methods>h3{
 #iv_billing_ssn_field, #pp_billing_ssn_field{
   display:none ;   
 }
+.select2-selection{
+  border:none !important;
+}
+.select2-search__field{
+  display:none;
+}
+.select2-selection__rendered{
+    background-color:   #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius:5px;
+}
+.wc-pickup-location-note{
+  margin-top:15px;
+}
