@@ -981,36 +981,31 @@ function rvlvr_featured_products_shortcode( $atts ) {
 	global $woocommerce_loop;
 
 	extract(shortcode_atts(array(
-		'per_page'      => '12',
-		'columns'       => '4',
-		'orderby' => 'date',
-		'order' => 'desc',
-		'category'=> ''
+		'per_page'	=> '12',
+		'columns'  	=> '4',
+		'orderby' 	=> 'date',
+		'order' 	=> 'desc',
+		'category'	=> ''
 	), $atts));
 	$args = array(
-		'post_type'     => 'product',
-		'post_status' => 'publish',
+		'post_type'     		=> 'product',
+		'post_status' 			=> 'publish',
 		'ignore_sticky_posts'   => 1,
-		'posts_per_page' => $per_page,
-		'orderby' => $orderby,
-		'order' => $order,
-		'tax_query' => array(
+		'posts_per_page' 		=> $per_page,
+		'orderby' 				=> $orderby,
+		'order' 				=> $order,
+		'tax_query' 			=> array(
 			array(
-				'taxonomy'      => 'product_cat',
-				'terms'         => array( esc_attr($category) ),
-				'field'         => 'slug',
-				'operator'      => 'IN'
-			)
-		),
-		'meta_query' => array(
-			array(
-				'key' => '_visibility',
-				'value' => array('catalog', 'visible'),
-				'compare' => 'IN'
+				'taxonomy'      	=> 'product_cat',
+				'terms'         	=> array( esc_attr($category) ),
+				'field'         	=> 'slug',
+				'operator'      	=> 'IN'
 			),
 			array(
-				'key' => '_featured',
-				'value' => 'yes'
+				'taxonomy' => 'product_visibility',
+		        'field'    => 'name',
+        		'terms'    => 'featured',
+		        'operator' => 'IN',
 			)
 		)
 	);
