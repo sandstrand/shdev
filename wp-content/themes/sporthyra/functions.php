@@ -183,8 +183,8 @@ function agentwp_dequeue_stylesandscripts() {
 if ( class_exists( 'woocommerce' ) ) {
 //wp_dequeue_style( 'select2' );
 //wp_deregister_style( 'select2' );
-wp_dequeue_script( 'select2');
-wp_deregister_script('select2');
+//wp_dequeue_script( 'select2');
+//wp_deregister_script('select2');
 }
 }
 
@@ -723,21 +723,19 @@ function rvlvr_get_products($cat){
 	$args = array(
 		'post_type'             => 'product',
 		'post_status'           => 'publish',
-		'ignore_sticky_posts'   => 1,
-		'posts_per_page'   		=> 20,
-		'meta_query'            => array(
-			array(
-				'key'           => '_visibility',
-				'value'         => array('catalog', 'visible'),
-				'compare'       => 'IN'
-			)
-		),
+		'ignore_sticky_posts'   => 0,
+		'posts_per_page'   		=> 40,
 		'tax_query'             => array(
 			array(
 				'taxonomy'      => 'product_cat',
 				'field' => 'term_id', //This is optional, as it defaults to 'term_id'
 				'terms'         => $cat,
 				'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+			),
+			array(
+				'key'           => '_visibility',
+				'value'         => array('catalog', 'visible'),
+				'compare'       => 'IN'
 			)
 		)
 	);
@@ -842,6 +840,10 @@ function rvlvr_menu_season_equipment(){
 		$title = $category->name;
 		$cat = $category -> term_id;
 		$products = rvlvr_get_products($cat);
+		//var_export($products);
+		foreach ($products as $product){
+			//echo $procuct->'post_name';
+		}
 		$cat_seasons = get_option( "rvlvr_tax_seasons_$cat" );
 		if( $cat_seasons && in_array(rvlvr_get_seasons('current')[0]['ID'], $cat_seasons)){
 				rvlvr_build_menu_products($products, $title, $cat, $break );
