@@ -1253,6 +1253,8 @@ add_action('woocommerce_single_product_summary', 'rvlvr_season_upsell', 7 );
 //add_action('woocommerce_single_product_summary', 'rvlvr_shipping_info', 60 );
 
 function rvlvr_shipping_info(){
+	// Removed 2019-08, no shipping
+	/*
 	global $product;
 	if(!in_array(get_the_id(), rvlvr_config()['rvlvr_no_season_upsell'])){
 		echo "<div class='shipping_info col-md-7'>"; 
@@ -1269,11 +1271,12 @@ function rvlvr_shipping_info(){
 		rvlvr_season_warning($product);
 		echo "</div>";
 		echo "<div style='clear:both;'></div>";
-	}
+	}*/
 }
 
 function rvlvr_season_warning($product){
-	
+	//Removed 2019-08, no shpping
+	/*
 	if($product->is_type( 'variable' )){
 		foreach(rvlvr_config()['rvlvr_no_rent'] as $check){
 			if( rvlvr_has_attribute_variant($product, $check)){
@@ -1281,7 +1284,7 @@ function rvlvr_season_warning($product){
 				break;
 			}
 		}
-	}
+	}*/
 }
 
 
