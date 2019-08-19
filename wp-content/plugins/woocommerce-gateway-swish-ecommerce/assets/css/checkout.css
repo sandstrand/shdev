@@ -15,6 +15,12 @@
         transform:rotate(360deg);
     }
 }
+#payment .payment_methods li .payment_box .wc-swish-form-payer-alias{
+	background-repeat: no-repeat;
+    background-position: right .6180469716em center;
+    background-size: 31px 20px;
+    background-image: url(../images/mobile-phone.svg);
+}
 #redlight-swish-popup_wraper{
 	display: none;
 	position:fixed;

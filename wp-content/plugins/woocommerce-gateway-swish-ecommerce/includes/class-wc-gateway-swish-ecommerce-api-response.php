@@ -94,15 +94,4 @@ abstract class WC_Gateway_Swish_Ecommerce_Response {
 		$order->payment_complete();
 	}
 
-	/**
-	 * Hold order and add note
-	 * @param  WC_Order $order
-	 * @param  string $reason
-	 */
-	protected function payment_on_hold( $order, $reason = '' ) {
-		$order->set_status( 'on-hold', $reason );
-		$order->reduce_order_stock();
-		$order->save();
-		WC()->cart->empty_cart();
-	}
 }

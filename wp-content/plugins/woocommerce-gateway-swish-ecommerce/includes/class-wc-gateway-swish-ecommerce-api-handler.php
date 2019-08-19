@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-include_once( 'class-wc-gateway-swish-ecommerce-api-response.php' );
+
 /**
  * Handles responses from Swish API
  */
@@ -135,16 +135,20 @@ class WC_Gateway_Swish_Ecommerce_API_Handler extends WC_Gateway_Swish_Ecommerce_
 	 */
 	protected function save_swish_ecommerce_meta_data( $order, $posted ) {
 		if ( ! empty( $posted['paymentReference'] ) ) {
-			WC_Gateway_Swish_Ecommerce::log( 'updating post meta "_swish_payment_reference" with:' .wc_clean( $posted['paymentReference'] ));
-			add_post_meta( $order->get_id(), '_swish_payment_reference', wc_clean( $posted['paymentReference'] ) );
-			WC_Gateway_Swish_Ecommerce::log( 'updating post meta "_swish_payment_status" with:' .wc_clean( $posted['status'] ));
-			add_post_meta( $order->get_id(), '_swish_payment_status', wc_clean( $posted['status'] ) );
+			WC_Gateway_Swish_Ecommerce::log( 'update_meta_data "_swish_payment_reference" with:' .wc_clean( $posted['paymentReference'] ));
+			$order->update_meta_data('_swish_payment_reference', wc_clean( $posted['paymentReference'] ));
+			WC_Gateway_Swish_Ecommerce::log( 'update_meta_data "_swish_payment_status" with:' .wc_clean( $posted['status'] ));
+			$order->update_meta_data('_swish_payment_status', wc_clean( $posted['status'] ));
+			WC_Gateway_Swish_Ecommerce::log( 'Saving save_swish_ecommerce_meta_data' );
+			$order->save();
 		}
 		if ( ! empty( $posted['originalPaymentReference'] ) ) {
 			WC_Gateway_Swish_Ecommerce::log( 'updating post meta "_swish_refund_id" with:' .wc_clean( $posted['id'] ));
-			add_post_meta( $order->get_id(), '_swish_refund_id', wc_clean( $posted['id'] ) );
+			$order->update_meta_data('_swish_refund_id', wc_clean( $posted['id'] ));
 			WC_Gateway_Swish_Ecommerce::log( 'updating post meta "_swish_refund_status" with:' .wc_clean( $posted['status'] ));
-			add_post_meta( $order->get_id(), '_swish_refund_status', wc_clean( $posted['status'] ) );
+			$order->update_meta_data('_swish_refund_status', wc_clean( $posted['status'] ));
+			WC_Gateway_Swish_Ecommerce::log( 'Saving save_swish_ecommerce_meta_data' );
+			$order->save();
 		}
 	}
 }
